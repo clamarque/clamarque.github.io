@@ -1,0 +1,171 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+	background-color: #2f374b;
+	height: 110px;
+}
+/* menu */
+
+.panier1 {
+margin-top: -89px;
+float: right;
+margin-right: 7%;
+}
+ul { list-style-type: none;}
+
+ul li {
+	color:#94c23d;
+	border: 1px solid #94c23d;
+	float: left;
+}
+
+span.R_price {
+	display: block;
+	color: #FFF;
+	border-top: 1px solid #94c23d;
+	margin: 0;
+	padding: 5px 5px;
+	font-weight: bolder;
+}
+
+.items, .total {
+	width: 150px;
+	padding: 5px 5px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+
+
+.panier {
+	margin-left: 146px;
+	margin-bottom: 24px;
+}
+
+.row {
+margin: 0 auto;
+width: 1040px;
+}
+.box {
+	height: 401px;
+	float:left;
+	margin: 30px auto;
+	margin-left: 40px;
+	width: 300px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+}
+.description {
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+	background-color: #f2f1ef;
+	height: 23px;
+	padding: 12px 19px;
+}
+
+.price {
+	text-decoration: none;
+	color: #94c23d;
+	font-weight: bolder;
+}
+
+.gift:hover {
+background-color: #94c23d;
+}
+.gift{
+	background-color: #f2f1ef;
+	float: left;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+	margin: 1px 1px;
+}
+
+.rating {
+	background-color: #f2f1ef;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+	width: 220px;
+	margin: 1px 62px;
+	height: 31px;
+	padding: 9px 9px;
+}
+.rating a {
+	color: #aaa;
+	text-decoration: none;
+	font-size: 25px;
+	transition: color .4s;
+}
+.rating a:hover,  
+.rating a:focus,  
+.rating a:hover ~ a,  
+.rating a:focus ~ a {  
+   color: #94c23d; 
+   cursor: pointer;  
+}  
+.add {
+float: right;
+margin-top: -71px;
+margin-right: -14px;
+}
+
+/*tableau panier */
+#table span{
+	display: inline;
+	float: left;
+	border:1px solid blue;
+	margin: 0px;
+	padding:3px;
+}
+
+.rowtitle {
+	clear: left;
+	margin:0;
+	padding: 0;
+}
+
+
+table {
+	font-weight: bolder;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+	width: 80%;
+	margin: 100px auto;
+	height: auto;
+}
+
+thead th{
+	padding: 10px;
+	color: #000;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+}
+
+td {
+	color: #94c23d;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+	text-align: center;
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+    input[type="text"] {
+width: 50px;
+}
+
+input[type="submit"] {
+margin-left: 44%;
+}
+
+@media screen and (max-width: 640px) {
+	header{
+		/*background-image: url(img/chastore.jpg);*/
+		height: 196px;
+	}
+
+	.panier1{
+		margin-left: 20px
+	}
+	.panier{
+		margin-left: 0
+	}
+}
