@@ -25,7 +25,7 @@ margin-left: 9%;
 .block {
 	background: #FFF;
 	height: 80px;
-	width: 700px;
+	width: 600px;
 	margin: 0 auto;
 	border-radius: 13px;
 	border: 1px solid #FFF;
@@ -55,19 +55,19 @@ p{
 	text-align: right;
 }
 #epsi p {
-	padding-left: 12%;
+	padding-left: 7%;
 	padding-top: 7px;
 }
 #idrac p {
-	padding-left: 17%;
+	padding-left: 15%;
 	padding-top: 6px;
 }
 #supcom p{
-	padding-left: 8%;
+	padding-left: 3%;
 	padding-top: 7px;
 }
 #wis  p{
-	padding-left: 20%;
+	padding-left: 17%;
 	padding-top: 7px;
 }
 #epsi p span{
@@ -89,16 +89,19 @@ color: #3e8dbb;
 font-weight: bolder;
 }
 #epsi a{
-padding: 60px;
+padding: 20px;
 }
 #idrac a {
-padding-left: 71px;
+padding-left: 21px;
+}
+#supcom a {
+font-size: 14px;
 }
 #ifag a {
-	padding-left: 40px;
+	padding-left: 0px;
 }
 #wis a {
-	padding-left: 91px;
+	padding-left: 48px;
 }
 
 #idrac p span {
@@ -120,14 +123,24 @@ padding-left: 71px;
 
 
 .sentence {
-	margin-left: 30%;
+	margin-left: 18%;
 }
 .sentence1 {
-	margin-left: 31%;
+	margin-left: 20%;
 }
 footer {
 background: #0069a6;
 height: 45px;
 color: #FFF;
 text-align: center;
+width: 600px;
+margin: 0 auto;
+}
+
+.ifag_p {
+	white-space: pre-line;
+	float: left;
+	font-weight: bolder;
+	text-align: right;
+	font-size: 14px;
 }
