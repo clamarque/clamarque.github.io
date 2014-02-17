@@ -60,12 +60,15 @@ p{
 }
 #idrac p {
 	padding-left: 17%;
+	padding-top: 6px;
 }
 #supcom p{
 	padding-left: 8%;
+	padding-top: 7px;
 }
 #wis  p{
 	padding-left: 20%;
+	padding-top: 7px;
 }
 #epsi p span{
 	color: #b83288;
