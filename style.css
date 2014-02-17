@@ -1,54 +1,132 @@
-body, html {
+
+* {
 	margin: 0;
 	padding: 0;
 }
-header.header {
-	background-color:#323232;
-	border-bottom: 3px solid #2FAFCB;
+html, body {
+	height: 100%;
 }
-
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+body{
+	background: #a7a8aa;
+	font-family: 'Roboto', sans-serif;
 }
-li {
-	float: left;
-	border-left: 1px solid rgba(0,0,0,0.9);
-}
-a:link, a:visited {
-	display: block;
-	width: 120px;
-	height: 37px;
-	font-weight: bold;
-	color: #FFF;
-	background-color: #323232;
-	text-align: center;
-	padding-top: 15px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-a:hover, a:active
-{
-	background-color: #3e3e3e;
-}
-
-/*FOOTER */
-
-#footer{
-	min-height: 100px;
-	height: auto;
-}
-footer.footer{
-	background: #303030;
-	color: #2FAFCB;
-	margin-top: 431px;
-}
-
-/*TITRE */
 
 h1 {
-	font-family: 'Pacifico', cursive;
-	color: #2FAFCB;
+	color: #FFF;
+	text-align: center;
+	font-size: 35px;
+}
+h1 strong {
+	color: #0069a6;
+	text-shadow: 0px 0px 9px #FFF;
+	font-size: 51px;
+margin-left: 9%;
+}
+.block {
+	background: #FFF;
+	height: 80px;
+	width: 700px;
+	margin: 0 auto;
+	border-radius: 13px;
+	border: 1px solid #FFF;
+	border-left-width: 20px;
+	margin-bottom: 40px;
+}
+#epsi {
+	border-left-color: #b83288;
+}
+#idrac {
+	border-left-color: #707173;
+}
+#ifag {
+	border-left-color: #cc071e;
+	height: 87px;
+}
+#supcom {
+	border-left-color: #005aa1;
+}
+#wis {
+	border-left-color: #ffec00;
+}
+p{
+	white-space: pre-line;
+	float: left;
+	font-weight: bolder;
+	text-align: right;
+}
+#epsi p {
+	padding-left: 12%;
+	padding-top: 7px;
+}
+#idrac p {
+	padding-left: 17%;
+}
+#supcom p{
+	padding-left: 8%;
+}
+#wis  p{
+	padding-left: 20%;
+}
+#epsi p span{
+	color: #b83288;
+	font-weight: bolder;
+}
+.barre {
+	border-left: 2px solid grey;
+	height: 79px;
+	margin-left: 40%;
+}
+img {
+	vertical-align: middle;
+	padding: 5px 17px;
+}
+a {
+text-decoration: none;
+color: #3e8dbb;
+font-weight: bolder;
+}
+#epsi a{
+padding: 60px;
+}
+#idrac a {
+padding-left: 71px;
+}
+#ifag a {
+	padding-left: 40px;
+}
+#wis a {
+	padding-left: 91px;
+}
+
+#idrac p span {
+	color: #707173;
+	font-weight: bolder;
+}
+#ifag p span {
+	color: #cc071e;
+	font-weight: bolder;
+}
+#supcom p span {
+	color: #005aa1;
+	font-weight: bolder;
+}
+#wis p span {
+	color: #ffec00;
+	font-weight: bolder;
+}
+
+#wis img {
+	background: #000;
+}
+.sentence {
+	margin-left: 30%;
+}
+.sentence1 {
+	margin-left: 31%;
+}
+footer {
+background: #0069a6;
+height: 45px;
+color: #FFF;
+text-align: center;
 }
