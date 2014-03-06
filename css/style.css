@@ -157,13 +157,13 @@ padding: 0 12%;
 }
 
 #left {width: 40%; float: left; margin-top: 5%}
-#right {width:60%;float:right;margin-top: 1%}
+#right {float:right;margin-top: 1%}
 
 /* BALNEO
 ========================================  */
 
 #leftB {width: 50%; float: left;}
-#rightB {width: 50%; float: right;margin-top: 3%;}
+#rightB { float: right;margin-top: 3%;}
 .tulipe {list-style-image: url(../img/tulipe.png);text-decoration: underline;}
 #center {
 float: left;
