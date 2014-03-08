@@ -160,7 +160,7 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 	}
 @media (min-width: 1440px) {
 	footer {bottom: 0;}
-	section {height: 80.2;}
+	section {height: 80.2%;}
 }
 @media (min-width:1800px){
 	section{height: 80.40%; margin: 0 auto; }
