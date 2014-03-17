@@ -1,3 +1,47 @@
+<?php
+if(!empty($_POST)) {
+  extract($_POST);
+  $valid = true;
+  if(empty($nom)){
+    $valid=false;
+    $erreurnom="Nom obligatoire";
+  }
+  if(!preg_match("/^[a-z0-9\-_.]+@[a-z0-9\-_.]+\.[a-z]{2,3}$/i",$email))
+   {
+    $valid=false;
+    $erreurmail ="votre mail n'est pas valide";
+   }
+  if(empty($email)){
+    $valid=false;
+    $erreurmail="mail obligatoire";
+  }
+
+if(empty($message)){
+    $valid=false;
+    $erreurmessage="message obligatoire";
+  }
+  if($valid){
+    
+$to = "chabox@hotmail.fr";
+$subject = $nom." a contact le site";
+$header= "From: $nom <$email>";
+$message = stripslashes($message);
+$nom = stripslashes($nom);
+if(mail($to,$subject,$message,$header)){
+$erreur = "Votre message nous ai bien parvenu";
+unset($nom);
+unset($email);
+unset($message);
+}
+else{
+$erreur = "Une erreur est survenue";
+}
+/*
+echo "message envoyé !!";*/
+  }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -50,30 +94,36 @@
         <tbody>
             <tr>
               <td>
-                          
-                   <form role="form" method="post" action="traitement.php">
+              <?php if(isset($erreur)) { echo $erreur;} ?>
+                   <form role="form" method="post" action="contact.php">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="" placeholder="Enter email">
+                <input type="email" class="form-control" id="email" name="email" value="<?php if(isset($email)) echo $email; ?>" placeholder="Enter email">
+                <span id="error-message">
+                    <?php if (isset($erreurmail)) echo $erreurmail; ?>
+                </span>
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Nom</label>
-                <input type="text" class="form-control" id="nom" name="nom"  value="" placeholder="Nom">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom" name="nom"  value="<?php if(isset($nom)) echo $nom; ?>" placeholder="Nom">
+                <span id="error-message"><?php if(isset($erreurnom)) echo $erreurnom; ?></span>
 
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Prenom</label>
                 <input type="text" class="form-control" id="prenom" name="prenom" value=""placeholder="Prenom">
               </div>
-              <textarea class="form-control" rows="3" id="message" name="message"></textarea>
+              <textarea class="form-control" rows="3" id="message" name="message"><?php if(isset($message)) echo $message; ?></textarea>
+              <span id="error-message"><?php if (isset($erreurmessage)) echo $erreurmessage; ?></span>
 
-              <button type="submit" class="btn btn-default">Envoyer</button>
+
+              <button type="submit" class="btn btn-default" value="Envoyer">Envoyer</button>
             </form>
 
               </td>
-              <td>Isabelle et jean-Pierre DANET <br>  
+              <td>Isabelle et Jean-Pierre DANET <br>  
                   4 rue du Moulin <br>
-                  59940 Neuf Berquin, France
+                  59940 Neuf-Berquin, France
                   <br><br>
                   <img src="img/logo_gitesDeFrance.gif" alt="GiteDeFrance" width="50" /> Pour réserver ou vérifier les disponibilités de notre gite sur le site officiel des gîtes de france...<br>
                   <a href="http://www.gites-de-france.com/">Le gîte référence Numéro:?</a>
@@ -97,7 +147,7 @@
             <p>Coordonées GPS :</p>
             <p>N50° 39.7284', E002° 39.2408'</p>
 
-            <p>Neuf-berquin est à : </p>
+            <p>Neuf-Berquin est à : </p>
             <ul>
               <li> 40km de Lille</li>
               <li> 35km de Lens</li>
