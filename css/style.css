@@ -16,7 +16,7 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   height:auto;
-  background-color: rgba(102,119,85, 0.8);
+  background-color: rgba(102,119,85, 0.9);
 border-top: 1px solid #e7e7e7;
 }
 body > footer > p.footerp {
@@ -48,7 +48,7 @@ body > footer > p:nth-child(3) {
   ======================== */
   
   #livret {
-padding-left: 77%;
+padding-left: 75%;
 }
 .imgAcceuil {
   width: 24%;
@@ -62,10 +62,11 @@ padding-left: 77%;
 /*  S E C T I O N 
   ================================================== */
 section {
-  background: #675;
+  background-color: rgba(102,119,85, 1);
   color: #FFF;
   opacity: 0.95;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 h1 {  padding: 1% 0 3% 3%;}
 h4{padding-left: 3%;color:#323946; font-weight: bolder;}

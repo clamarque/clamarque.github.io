@@ -52,7 +52,6 @@ echo "message envoyé !!";*/
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="engine1/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Miniver|Averia+Gruesa+Libre' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="engine1/jquery.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,7 +62,7 @@ echo "message envoyé !!";*/
   </head>
   <body>
       <div class="navbar navbar-default" role="navigation">
-       <img src="img/logo.png" alt="logo" />
+       <img src="img/logo/logo-off.png" alt="logo" width="240" />
        <blockquote><span>(</span>Un retour  <span class="miniver">aux sources</span></blockquote>
       <div class="container">
         <div class="navbar-header">
@@ -80,7 +79,7 @@ echo "message envoyé !!";*/
             <li><a href="gite.html">Gîte</a></li>
             <li><a href="balneo.html">Balnéothérapie</a></li>
             <li><a href="tarifs.html">Tarifs</a></li>
-            <li class="active"><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="contact.php">Contact</a></li>
             <li><a href="liens.html">Liens utiles</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -125,7 +124,7 @@ echo "message envoyé !!";*/
                   4 rue du Moulin <br>
                   59940 Neuf-Berquin, France
                   <br><br>
-                  <img src="img/logo_gitesDeFrance.gif" alt="GiteDeFrance" width="50" /> Pour réserver ou vérifier les disponibilités de notre gite sur le site officiel des gîtes de france...<br>
+                  <img src="img/logo/clevacances.png" alt="GiteDeFrance" width="100" /> Pour réserver ou vérifier les disponibilités de notre gite sur le site officiel des gîtes de france...<br>
                   <a href="http://www.gites-de-france.com/">Le gîte référence Numéro:?</a>
               </td>
                   <td>Téléphone: +(33) 3 28 40 43 70 <br>
@@ -166,16 +165,14 @@ echo "message envoyé !!";*/
    	</section>
     <footer>
         <div class="footerLogo">
-          <img src="img/chequevacances.png" alt="cheque-vacances" width="50" height="50" />
-          <img src="img/clevacances.png" alt="cle-vacances" width="100" />
+          <img src="img/logo/chequevacances.png" alt="cheque-vacances" width="50" height="50" />
+          <img src="img/logo/clevacances.png" alt="cle-vacances" width="100" />
         </div>
         <p class="footerp">website developed by: <a href="http://camilledewavrin.github.io/" target="about_blanck">Camille D</a> | <a href="http://charleslamarque.com/" target="about_blanck">Charles L</a></p>
 
         <p>Copyright "Parenthèse champètre" 2014 - Gite et espace balneotherapie</p>
     </footer>
 
-        <script type="text/javascript" src="engine1/wowslider.js"></script>
-        <script type="text/javascript" src="engine1/script.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
    </body>
