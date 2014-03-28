@@ -153,7 +153,7 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 }
 @media (min-width:768px)
 	{
-		.container{width:750px}
+		.container{width:750px;}
 		blockquote {display: block;}
 	}
 @media (min-width:992px)
