@@ -6,12 +6,12 @@
     <title>Parenthèse Champêtre</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Miniver|Averia+Gruesa+Libre' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="../engine1/jquery.js"></script>
-        <link rel="stylesheet" type="text/css" href="../zoombox.css" /><link rel="stylesheet" type="text/css" href="http://grafikart.fr/css/zoombox.css" /> 
-
-
+    <!-- Modernizr -->
+    <script src="../js/modernizr.js"></script>
+    <script type="text/javascript" src="../js/jquery.flexslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="../css/zoombox.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
   </head>
   <body>
       <div class="navbar navbar-default" role="navigation">
-       <img src="../img/logo.png" alt="logo" />
+       <img src="../img/logo/logo-off1.png" alt="logo" width="193" />
        <blockquote><span>(</span>Un retour  <span class="miniver">aux sources</span></blockquote>
       <div class="container">
         <div class="navbar-header">
@@ -45,34 +45,31 @@
       </div>
     </div>
         <section id="index">
-          <a href="../index.html"><img src="../img/fr.gif" alt="fr" /></a>
-            <a href=""><img src="../img/en.gif" alt="en" /></a>
+          <a href="../index.html"><img src="../img/icon/fr.gif" alt="fr" /></a>
+            <a href=""><img src="../img/icon/en.gif" alt="en" /></a>
             <div id="livret">
-              <a href="../files/livret accueil1 mars 2014.pdf" target="about_blanck"><img src="../img/pdf.png" />download our home booklet</a>
+              <a href="../files/livret accueil1 mars 2014.pdf" target="about_blanck"><img src="../img/icon/pdf.png" />download our home booklet</a>
             </div>
-        <h1>Welcome...<span> <br>Chez Parenthèse Champètre, le gîte d'Isabelle et Jean-Pierre Danet</span></h1>
-        <div id="wowslider-container1">
-              <div class="ws_images">
-                <ul>
-                  <li><img src="../data1/images/dsc_0040.jpg" alt="Gîte" title="Gîte" id="wows1_0"/></li>
-                  <li><img src="../data1/images/coucher_soleil_jardin.jpg" alt="coucher soleil jardin" title="coucher soleil " id="wows1_1"/></li>
-                  <li><img src="../data1/images/dsc_00271.jpg" alt="Salle à manger" title="Salle à manger" id="wows1_3"/></li>
-                  <li><img src="../data1/images/dsc_0135.jpg" alt="Table de massage" title="Table de massage" id="wows1_4"/></li>
-                  <li><img src="../data1/images/dsc_0100.jpg" alt="Balnéothérapie" title="Balnéothérapie" id="wows1_5"/></li>
-                </ul>
-              </div>
-              <div class="ws_bullets">
-                <div>
-                  <a href="#" title="DSC_0040"><img src="../data1/tooltips/dsc_0040.jpg" alt="DSC_0040"/>1</a>
-                  <a href="#" title="coucher soleil jardin"><img src="../data1/tooltips/coucher_soleil_jardin.jpg" alt="coucher soleil jardin"/>2</a>
-                  <a href="#" title="DSC_0027"><img src="../data1/tooltips/dsc_0027.jpg" alt="DSC_0027"/>4</a>
-                  <a href="#" title="DSC_0135"><img src="../data1/tooltips/dsc_0135.jpg" alt="DSC_0135"/>5</a>
-                  <a href="#" title="DSC_0100"><img src="../data1/tooltips/dsc_0100.jpg" alt="DSC_0100"/>6</a>
-                </div>
-              </div>
-              <div class="ws_shadow"></div>
-        </div>
-
+            <h1>Welcome...<span> <br>Chez Parenthèse Champètre, le gîte d'Isabelle et Jean-Pierre Danet</span></h1>
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="../img/Diapo/1.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="../img/Diapo/2.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="../img/Diapo/3.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="../img/Diapo/4.jpg" alt="" />
+                </li>
+                <li>
+                  <img src="../img/Diapo/5.jpg" alt="" />
+                </li>
+              </ul>
+            </div>
             <p>PARENTHESE CHAMPETRE ("rustic parenthesis"), Isabelle and Jean-Pierre Danet's accommodation welcomes you in Neuf-Berquin, a small town in the Flanders (1,200 inhabitants). It is located on the great Roman path that stretches form Cassel to Arras, West of Lille (40km).</p>
             <p>Built in 2013 in the converted farm house from the early 20th century, it is the first accomodation of its kind in the town. It offers peace and relaxation in an expanding touristic area, rich in history, culture, industries and farming... at the gates of inner Flanders, of the Lille region and of Belgium.</p>
             <p>Take advantage of your stay to grant yourself a well-being care in our balneotherapy spa(upon reservation and at extra cost)</p>
@@ -80,46 +77,60 @@
             <h1>To see more...</h1>
 
              <div id="zoomImageHaut">
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/DSC_0038.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0038.JPG" class="bordered" alt="" /></a>
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/DSC_0036.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0036.JPG" class="bordered" alt="" /></a>
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/cuisine.jpg"><img class="imgAcceuil" src="../img/Accueil/cuisine.jpg" class="bordered" alt="" /></a>
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/DSC_0056.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0056.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/1"><img class="imgAcceuil" src="../img/Accueil/1.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/2.JPG"><img class="imgAcceuil" src="../img/Accueil/2.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/3.jpg"><img class="imgAcceuil" src="../img/Accueil/3.jpg" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/4.JPG"><img class="imgAcceuil" src="../img/Accueil/4.JPG" class="bordered" alt="" /></a>
             </div>
             <div id="zoomImageBas">
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/DSC_0262.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0262.JPG" class="bordered" alt="" /></a>
-              <a class="zoombox zgallery1" title="This is a racoon" href="../img/Accueil/DSC_0141.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0141.JPG" class="bordered" alt="" /></a>
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/DSC_0026.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0026.JPG" class="bordered" alt="" /></a>
-              <a class="zoombox zgallery1" title="" href="../img/Accueil/DSC_0101.JPG"><img class="imgAcceuil" src="../img/Accueil/DSC_0101.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/5.JPG"><img class="imgAcceuil" src="../img/Accueil/5.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/6.JPG"><img class="imgAcceuil" src="../img/Accueil/6.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/7.JPG"><img class="imgAcceuil" src="../img/Accueil/7.JPG" class="bordered" alt="" /></a>
+              <a class="zoombox zgallery1" title="" href="../img/Accueil/8.JPG"><img class="imgAcceuil" src="../img/Accueil/8.JPG" class="bordered" alt="" /></a>
             </div>
        
     </section>
 
     <footer>
-        <div class="footerLogo">
-          <img src="../img/chequevacances.png" alt="cheque-vacances" width="50" height="50" />
-          <img class="clevacances" src="../img/clevacances.png" alt="cle-vacances" width="100" />
+        <div class="col-md-4">
+          <img src="../img/logo/chequevacances.png" alt="cheque-vacances" width="50" height="50" />
+          <img  src="../img/logo/clevacances.png" alt="cle-vacances" width="100" />
         </div>
-        <p class="footerp">website developed by: <a href="http://camilledewavrin.github.io/" target="about_blanck">Camille D</a> | <a href="http://charleslamarque.com/" target="about_blanck">Charles L</a></p>
-
-        <p>Copyright "Parenthèse champètre" 2014 - Gite et espace balneotherapie</p>
+        <div class="col-md-5">
+          <p>Copyright "Parenthèse champètre" 2014 - Gite et espace balneotherapie</p>
+        </div>
+        <div class="col-md-3">
+          <p>website developed by: <a href="http://camilledewavrin.github.io/" target="about_blanck">Camille D</a> | <a href="http://charleslamarque.com/" target="about_blanck">Charles L</a>
+          </p>
+        </div>  
     </footer>
-  
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../engine1/wowslider.js"></script>
-    <script type="text/javascript" src="../engine1/script.js"></script>
-    <script type="text/javascript" src="http://grafikart.fr/js/main.js"></script>    <script type="text/javascript" src="../zoombox.js"></script> 
-    <script type="text/javascript"> 
+    <script type="text/javascript" src="http://grafikart.fr/js/main.js"></script>    <script type="text/javascript" src="../js/zoombox.js"></script> 
+   <script type="text/javascript"> 
 //<![CDATA[
     $(function(){
         $('a.zoombox').zoombox();
     });
 //]]>
 </script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="../js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+ 
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
   </body>
 </html>

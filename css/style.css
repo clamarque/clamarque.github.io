@@ -1,4 +1,4 @@
-html,body {height: 100%}
+html,body {height: 100%;}
 html { position: relative; }
 
 .miniver {
@@ -14,35 +14,22 @@ blockquote span { font-size: 3em;}
 footer {
   position: absolute;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height:auto;
   background-color: rgba(102,119,85, 0.9);
-border-top: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
 }
-body > footer > p.footerp {
-padding-top: 2%;
-}
-body > footer > p:nth-child(3) {
-padding-top: 2%;
-}
-
-footer img {
-  vertical-align: bottom;
-}
-
 footer p {
+  padding-top: 4%;
   color: #FFF;
 }
-
-
-.footerp{
-  float: right;
+.col-md-3 p {
+  padding-top: 7%;
+  padding-left: 5%;
+}
+footer img {
+  float: none;
 }
 
-body > footer > p:nth-child(3) {
-  display: block;
-  text-align: center;   
-}
 
 /* INDEX 
   ======================== */

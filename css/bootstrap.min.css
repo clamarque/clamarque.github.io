@@ -159,7 +159,7 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 @media (min-width:992px)
 	{
 		.container{width:970px}
-		section { height: 75.1%; }
+		section { height: 75.80%; }
 		#zoomImageHaut, #zoomImageBas{display: inherit;}
 	}
 @media (min-width:1200px)

@@ -164,13 +164,17 @@ echo "message envoyé !!";*/
       </table>
    	</section>
     <footer>
-        <div class="footerLogo">
+        <div class="col-md-4">
           <img src="img/logo/chequevacances.png" alt="cheque-vacances" width="50" height="50" />
-          <img src="img/logo/clevacances.png" alt="cle-vacances" width="100" />
+          <img  src="img/logo/clevacances.png" alt="cle-vacances" width="100" />
         </div>
-        <p class="footerp">website developed by: <a href="http://camilledewavrin.github.io/" target="about_blanck">Camille D</a> | <a href="http://charleslamarque.com/" target="about_blanck">Charles L</a></p>
-
-        <p>Copyright "Parenthèse champètre" 2014 - Gite et espace balneotherapie</p>
+        <div class="col-md-5">
+          <p>Copyright "Parenthèse champètre" 2014 - Gite et espace balneotherapie</p>
+        </div>
+        <div class="col-md-3">
+          <p>website developed by: <a href="http://camilledewavrin.github.io/" target="about_blanck">Camille D</a> | <a href="http://charleslamarque.com/" target="about_blanck">Charles L</a>
+          </p>
+        </div>  
     </footer>
 
         <script src="js/bootstrap.min.js"></script>
