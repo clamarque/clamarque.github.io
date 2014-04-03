@@ -140,22 +140,15 @@ vertical-align: top;
 
 #gite ul {text-decoration: none;}
 
-section#gite ul{ 
-padding: 0 12%;
+.col-lg-6 img {
+  float: none;
 }
-
-#left {width: 40%; float: left; margin-top: 5%}
-#right {float:right;margin-top: 1%}
 
 /* BALNEO
 ========================================  */
 
-#leftB {width: 50%; float: left;}
-#rightB { float: right;margin-top: 3%;}
 .tulipe {list-style-image: url(../img/tulipe.png);text-decoration: underline;}
-#center {
-float: left;
-}
+
 .bulle {font-size: 0.90em; color: #FFF;font-weight: normal;}
 .bulle1 {color: #323946;font-weight: bolder; font-size: 0.70em}
 
