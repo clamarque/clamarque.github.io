@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://clamarque.github.io">
-    <img src="http://clamarque.github.io/img/C.png" alt="clamarque" height="200">
+    <img src="http://clamarque.github.io/img/C.png" alt="clamarque" height="300">
   </a>
 </p>
 
