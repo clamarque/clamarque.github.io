@@ -1,4 +1,4 @@
-html,body {height: 100%;}
+html,body {height: 100%;width: 100%; background-image: url("../img/1.jpg"); background-repeat: no-repeat; background-size: 100%;}
 html { position: relative; }
 
 .miniver {
@@ -17,6 +17,7 @@ footer {
   height:auto;
   background-color: rgba(102,119,85, 0.9);
   border-top: 1px solid #e7e7e7;
+
 }
 footer p {
   padding-top: 4%;
@@ -26,6 +27,9 @@ footer p {
   padding-top: 7%;
   padding-left: 5%;
 }
+.col-md-4 {
+  text-align: right;
+}
 footer img {
   float: none;
 }
@@ -34,17 +38,15 @@ footer img {
 /* INDEX 
   ======================== */
   
-  #livret {
-padding-left: 75%;
-}
+ 
 .imgAcceuil {
   width: 24%;
-  height: 110%;
 }
 #zoomImageHaut, #zoomImageBas {
   width: 100%;
   height: 25%;
   margin-bottom: 3%;
+  margin-left: 1.5%;
 }
 /*  S E C T I O N 
   ================================================== */
@@ -55,7 +57,11 @@ section {
   overflow-y: auto;
   overflow-x: hidden;
 }
-h1 {  padding: 1% 0 3% 3%;}
+h1 {  
+  padding: 1% 0 3% 3%; 
+  font-family: 'Averia Gruesa Libre', cursive;
+  font-size: 1.80em;
+}
 h4{padding-left: 3%;color:#323946; font-weight: bolder;}
 span {font-size: 0.6em; color: #323946;
 font-weight: bolder;}
@@ -144,6 +150,10 @@ vertical-align: top;
   float: none;
 }
 
+.mosaicGite
+{
+  margin-bottom: 4%;
+}
 /* BALNEO
 ========================================  */
 
@@ -152,4 +162,65 @@ vertical-align: top;
 .bulle {font-size: 0.90em; color: #FFF;font-weight: normal;}
 .bulle1 {color: #323946;font-weight: bolder; font-size: 0.70em}
 
+/*--------SECTION --------*/
+@media (min-width: 1200px) {
+    section {
+            margin: 0 auto;
+            width: 75%;
+      }
 
+
+}
+@media (min-width: 992px){
+section {
+height: 77.6%;
+}
+
+
+}
+@media(min-width: 768px){
+    footer {
+    bottom: 0;
+  }
+}
+
+@media (min-width: 320px)
+section {
+width: 100%;
+height: auto;
+}
+/*--------MENU----------*/
+.navbar {
+      margin: 5% 0 0 10%;
+      background-color: transparent;
+      font-size: 20px;
+      }
+.navbar-default .navbar-nav > li > a {
+  color: #cccc00;
+}
+
+.header {
+    background-color: rgba(102,119,85, 0.95);
+    border-bottom: 1px solid #FFF;
+}
+.col-lg-1 img {
+}
+.col-lg-4 blockquote {
+  text-align: right;
+}
+
+/* slide */
+li.clone {
+  width: 495px;
+}
+
+a {
+color: #cccc00;
+}
+
+/*--------- LIEN--------*/
+.table {
+width: 80%;
+margin-bottom: 20px;
+margin: 0 auto;
+}

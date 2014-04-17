@@ -48,10 +48,10 @@ echo "message envoyé !!";*/
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Parenthèse Champêtre</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Miniver' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Averia+Gruesa+Libre' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-    <link href='http://fonts.googleapis.com/css?family=Miniver|Averia+Gruesa+Libre' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,31 +61,33 @@ echo "message envoyé !!";*/
     <![endif]-->
   </head>
   <body>
-      <div class="navbar navbar-default" role="navigation">
-       <img src="img/logo/logo-off.png" alt="logo" width="240" />
-       <blockquote><span>(</span>Un retour  <span class="miniver">aux sources</span></blockquote>
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="gite.html">Gîte</a></li>
-            <li><a href="balneo.html">Balnéothérapie</a></li>
-            <li><a href="tarifs.html">Tarifs</a></li>
-            <li class="active"><a href="contact.php">Contact</a></li>
-            <li><a href="liens.html">Liens utiles</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+    <div class="row header">
+      <div class="col-lg-1">
+       <img src="img/logo/logo-off.png" alt="logo" width="193" />
       </div>
-    </div>
-
+      <div class="col-lg-7 ">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="gite.html">Gîte</a></li>
+              <li><a href="balneo.html">Balnéothérapie</a></li>
+              <li><a href="tarifs.html">Tarifs</a></li>
+              <li class="active"><a href="contact.php">Contact</a></li>
+              <li><a href="liens.html">Liens utiles</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div><!-- menu col -->
+    </div> <!-- row-->
    	<section id="contact">
 
         <h1>Informations <span><br/>Pour nous contacter et nous trouver</span></h1>
@@ -124,8 +126,10 @@ echo "message envoyé !!";*/
                   4 rue du Moulin <br>
                   59940 Neuf-Berquin, France
                   <br><br>
+                  
                   <img src="img/logo/clevacances.png" alt="GiteDeFrance" width="100" /> Pour réserver ou vérifier les disponibilités de notre gite sur le site officiel des gîtes de france...<br>
-                  <a href="http://www.gites-de-france.com/">Le gîte référence Numéro:?</a>
+                <!--  <a href="http://www.gites-de-france.com/">Le gîte référence Numéro:?</a>
+                  -->
               </td>
                   <td>Téléphone: +(33) 3 28 40 43 70 <br>
                     Portable: +(33) 6 84 58 59 84  <br>
@@ -164,20 +168,17 @@ echo "message envoyé !!";*/
       </table>
    	</section>
     <footer>
-        <div class="col-md-4">
+        <div class="col-md-2">
           <img src="img/logo/chequevacances.png" alt="cheque-vacances" width="50" height="50" />
           <img  src="img/logo/clevacances.png" alt="cle-vacances" width="100" />
         </div>
-        <div class="col-md-5">
+        <div class="col-md-offset-1 col-md-5">
           <p>Copyright "Parenthèse champètre" 2014 - Gite et espace balneotherapie</p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <p>website developed by: <a href="http://camilledewavrin.github.io/" target="about_blanck">Camille D</a> | <a href="http://charleslamarque.com/" target="about_blanck">Charles L</a>
           </p>
         </div>  
     </footer>
-
-        <script src="js/bootstrap.min.js"></script>
-
    </body>
 </html>
