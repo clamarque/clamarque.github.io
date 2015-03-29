@@ -529,12 +529,12 @@ body > div > div > div.navbar-collapse.collapse.in {
 .control-group.error .checkbox,.control-group.error .radio,.control-group.error input,.control-group.error select,.control-group.error textarea{color:#b94a48}
 label.error{color:#fff;background:#b94a48;border:solid thin #fff;padding:3px 5px}
 label.valid{color:#fff;background:#5CB85C;border:solid thin #fff;padding:3px 5px}
-.social-icons .btn{margin-right:15px}
-.social-icons{padding-top:10px;margin-bottom:35px}
-.social-icons .btn.btn-clear{border:1px solid #fff}
+.social-icons .btn{margin-right:15px;}
+.social-icons{padding-top:10px;margin-bottom:35px;}
+.social-icons .btn.btn-clear{background: #333f47;}
 .btn-round{border-radius:50%;width:50px;height:50px;display:inline-block;padding:0}
 .btn-round i{top:15px;position:relative}
-.btn.btn-clear{border:1px solid #fff;color:#fff;background:0 0;font-weight:700;-webkit-transition-duration:.8s;-moz-transition-duration:.8s;-o-transition-duration:.8s;transition-duration:.8s;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;transition-property:transform}
+.btn.btn-clear{color:#fff;background:0 0;font-weight:700;-webkit-transition-duration:.8s;-moz-transition-duration:.8s;-o-transition-duration:.8s;transition-duration:.8s;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;-o-transition-property:-o-transform;transition-property:transform}
 .btn.btn-clear.selected,.btn.btn-clear:hover{background:#fff;-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg)}
 .btn-twitter:hover{color:#2BA9E0}
 .btn-facebook:hover{color:#204385}
