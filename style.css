@@ -475,11 +475,13 @@ body > div > div > div.navbar-collapse.collapse.in {
 #page-welcome header p{font-size:2em;display:inline-block;margin-bottom:5px;padding:0 8px;letter-spacing:.1em;line-height:3em;text-transform:uppercase}
 #page-profile{padding:75px 0;background:#fff}
 #page-profile .profile{border:5px solid #333;width:225px;height:225px;margin:0 20px 20px 0}
-#page-skills{padding:75px 0;background:#ececeb;text-align:center}
-#page-education{padding:75px 0;background:#f05b40;}
-#page-experience{padding:75px 0;background:#504d50;}
-#page-team {padding: 75px 0; background: #43509f;}
-#page-portfolio{padding:75px 0;background:#02535e;}
+#page-about-me{padding:75px 0;background:#ececeb;text-align:center}
+i.fa.fa-comment {
+  vertical-align: super;  padding-left: 6px;
+}
+#page-education{padding:75px 0;background:#ececeb;}
+#page-experience{padding:75px 0;background:#ececeb;}
+#page-portfolio{padding:75px 0;background:#ececeb;}
 #page-contact{padding:75px 0}
 #page-contact .contact-info p{font-size:1.2em}
 #grid-controls-wrapper{text-align:center;float:none;width:100%}
@@ -505,9 +507,18 @@ body > div > div > div.navbar-collapse.collapse.in {
 	font-weight:700;
 	letter-spacing:5px;
 	text-align:center;
-	color:##3c4a54;
+	color:#3c4a54;
 	text-transform:uppercase;
 	padding:20px 0
+}
+#page-about-me p {
+  font-size: 16px;
+  color: #363636;
+  line-height: 1.2;
+    text-align: left;
+}
+
+   
 }
 .underline{width:100px;height:2px;margin:auto;background: #262324;}
 .section-subtitle{text-align:center;padding:30px 0}
@@ -555,7 +566,7 @@ label.valid{color:#fff;background:#5CB85C;border:solid thin #fff;padding:3px 5px
 	#page-welcome header p{font-size:1em;line-height:3em}
 	.section-title{font-size:1.5em}
 	.section-header p{font-size:1.2em}
-	#grid,#page-skills{text-align:center}
+	#grid,#page-about-me{text-align:center}
 	#page-profile .profile{margin:0 auto 20px}}
 
 /*--------- CIRCLE ------------*/
