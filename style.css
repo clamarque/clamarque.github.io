@@ -468,6 +468,7 @@ body > div > div > div.navbar-collapse.collapse.in {
 	background-color: #FFF;
 }
 
+
 #page-welcome{width:100%;height:100%;position:relative;overflow:hidden;text-align:center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
 #page-welcome header{color:#fff;padding-top:20%}
 #page-welcome header h1{margin:0;padding:0;font-size:4.5em;font-weight:700;letter-spacing:.1em;line-height:1em;text-transform:uppercase}
@@ -500,11 +501,11 @@ body > div > div > div.navbar-collapse.collapse.in {
 .section-header{text-align:center}
 .section-header p{font-size:1.5em}
 .section-title{
-	font-size:3em;
+	font-size:2em;
 	font-weight:700;
 	letter-spacing:5px;
 	text-align:center;
-	color:#FFF;
+	color:##3c4a54;
 	text-transform:uppercase;
 	padding:20px 0
 }
