@@ -438,6 +438,9 @@ a:active,a:hover{text-decoration:none}
 h1,h2,h3,h4,h5,h6{font-family:Oxygen,sans-serif;}
 p {color: #e7e7e7;}
 .navbar{width:100%}
+.navbar.navbar, .navbar-default.navbar{
+    background: transparent;
+}
 .navbar-default
 {
 	position:fixed;
@@ -452,7 +455,7 @@ p {color: #e7e7e7;}
 }
 
 .navbar-nav{margin:0 auto;padding:0;list-style:none;display:inline-block;float:none;font-size:1em;font-weight:700}
-.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{background-color:transparent; color: #cbb677;}
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{background-color:transparent; color: #009688;}
 .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover
 {background:0 0}
 
@@ -634,3 +637,22 @@ nav li.circle_b
   font-size: 18px;
   display: block;
 }
+h3 {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted rgba(70, 70, 70, 0.5);
+  margin-bottom: 20px;
+}
+.article_title{
+    color: #009688;
+}
+p{
+    color: #464646;
+}
+.progress{
+     position: relative;
+}
+.progress span {
+    position: absolute;display: block;width: 100%;color: #000;line-height: 5px;
+}    
