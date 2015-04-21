@@ -7,7 +7,7 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  /*font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -230,7 +230,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  /*font-family: monospace, monospace;*/
   font-size: 1em;
 }
 
@@ -426,16 +426,16 @@ th {
   padding: 0;
 }
 /****** FIN ****/
+/*
 body,html{
 	height:100%;
 	width:100%;
-	font-family:'Source Sans Pro',Helvetica,Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
 	background-color: #3c4a54;
 	color:#757575;
 	}
 a:link,a:visited{outline:0}
 a:active,a:hover{text-decoration:none}
-h1,h2,h3,h4,h5,h6{font-family:Oxygen,sans-serif;}
 p {color: #e7e7e7;}
 .navbar{width:100%}
 .navbar.navbar, .navbar-default.navbar{
@@ -454,12 +454,12 @@ p {color: #e7e7e7;}
 	color: #FFF;
 }
 
-.navbar-nav{margin:0 auto;padding:0;list-style:none;display:inline-block;float:none;font-size:1em;font-weight:700}
+.navbar-nav{margin:0 auto;padding:0;list-style:none;display:inline-block;float:none;font-size:17px;font-weight:400}
 .navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{background-color:transparent; color: #009688;}
 .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover
 {background:0 0}
 
-/*----------RESPONSIVE MENU----------*/
+/----------RESPONSIVE MENU----------
 body > div > div > div.navbar-collapse.collapse.in {
 	background-color: rgba(33,33,33,0.9);
 }
@@ -566,46 +566,9 @@ label.valid{color:#fff;background:#5CB85C;border:solid thin #fff;padding:3px 5px
 	#grid,#page-about-me{text-align:center}
 	#page-profile .profile{margin:0 auto 20px}}
 
-/*--------- CIRCLE ------------*/
 
-div.round{
-	/*margin-left: 80%;*/
-	margin-top: 8%;
-	width: 150px;
-	height: 150px;
-	position: relative;
-}
-div.round input {
-	position: absolute;
-	top: 60px; left: 35px;
-	font-size: 25px;
-	text-align: center;
-	width: 80px;
-	border: none;
-	background: none;
-	outline: none;
-}
-div.round canvas{
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-}
-nav.circle {
-    display: inline-block;
-    width: auto;
-    text-align: center;
-}
-nav ul.circle_a
-{
-    list-style-type: none;
-}
-nav li.circle_b
-{
-    display: inline-block;
-    margin-right: 63px;
-	
-}
 
-/*--------RESPONSIVE PROJECTS---------*/
+/*--------RESPONSIVE PROJECTS---------
 
 @media (max-width: 320px){
 	#grid .mix{
@@ -632,6 +595,89 @@ nav li.circle_b
   font-size: 18px;
   display: block;
 }
+
+/*** NEW CSS Avril 2015 ***/
+html,body {
+    width: 100%; height: 100%; margin: 0;padding: 0; background: #3c4a54;
+}
+
+/*** NAVBAR ***/
+.navbar-default
+{
+	position:fixed;	border:0;	background-color: transparent;	text-transform:uppercase;    width: 100%;
+}
+.navbar-default .navbar-nav > li > a{
+	color: #FFF;
+}
+.navbar-nav{
+    margin:0 auto;padding:0;list-style:none;display:inline-block;float:none;font-size:14px;font-weight:400;
+}
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{
+    background-color:transparent; color: #009688;
+}
+/*----------NAVBAR HAMBURGER----------*/
+body > div > div > div.navbar-collapse.collapse.in {
+	background-color: rgba(33,33,33,0.9);
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #FFF;
+}
+
+/*** PAGE WELCOME ***/
+#page-welcome{
+    width:100%;height:100%;position:relative;overflow:hidden;text-align:center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;
+}
+#page-welcome header{
+    color:#fff;padding-top:20%;
+}
+#page-welcome header h1{
+    margin:0;padding:0;font-size:4.5em;font-weight:700;letter-spacing:.1em;line-height:1em;text-transform:uppercase;
+}
+#page-welcome header p{
+    font-size:2em;display:inline-block;margin-bottom:5px;padding:0 8px;letter-spacing:.1em;line-height:3em;text-transform:uppercase;
+}
+.btn-round{
+    width: 50px;height: 50px;border-radius: 50%; color: #009688; background: #333f47; padding: 10px;
+}
+.btn-clear:hover {
+  background: #fff;
+  -o-transform: rotate(360deg);
+}
+.btn-clear {
+  -o-transition-duration: .8s;
+  transition-duration: .8s;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
+.btn.btn-default {
+  margin: 40px auto 0;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 12px 26px;
+  cursor: pointer;
+  border: 2px solid #FFF;
+  border-radius: 0;
+  letter-spacing: 2px;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+.btn-twitter:hover{color:#2BA9E0}
+.btn-linkedin:hover{color:#015786}
+.btn-google:hover{color:#D3492C}
+.btn-github:hover {color:#4183c4;}
+
+/*** PAGE ABOUT ME ***/
+#page-about-me{
+    padding:75px 0;background:#FFF;
+}
+#page-about-me header {
+    text-align: center;
+}
 h3 {
   font-size: 25px;
   font-weight: 600;
@@ -642,11 +688,16 @@ h3 {
 .article_title{
     color: #009688;
 }
-p{
-    color: #464646;
-}
+
 .progress{
      position: relative;
+    height: 6px;
+    border-radius: 0;
+    box-shadow: none;
+    background: #C8C8C8;
+}
+.progress-bar  {
+    background: #009688;
 }
 .progress span {
     position: absolute;display: block;width: 100%;color: #000;line-height: 5px;
@@ -660,4 +711,18 @@ p{
   top: 0px;
   width: 120px;
 color: #009688;
+}
+/*** PAGE EXPERIENCES ***/
+#page-education{
+    padding:75px 0;background:#FFF;
+}
+#page-education header {
+    text-align: center;
+}
+/*** PAGE PORTFOLIO ***/
+#page-portfolio{
+    padding:75px 0;background:#FFF;
+}
+#page-portfolio header {
+    text-align: center;
 }
