@@ -6,4 +6,4 @@
 
 <h1>Clamarque</h1>
 
-<p>this deposit hosts the site of a client </p>
+<p>this deposit hosts my website</p>
