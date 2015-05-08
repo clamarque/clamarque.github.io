@@ -904,6 +904,6 @@ h3 {
 }
 
 media (max-width: 479px) {}
-#grid_logo {
+.grid_logo {
     margin-top: 60px;
 }
