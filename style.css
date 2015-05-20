@@ -907,3 +907,42 @@ media (max-width: 479px) {}
 .grid_logo {
     margin-top: 60px;
 }
+.techno ul {
+ list-style: none;
+    padding-top: 10px;
+}
+.techno ul li {
+  font: 12px "gothamLight", arial, sans-serif;
+  color: #555555;
+  margin: 14px 0;
+}
+.techno ul li span {
+  background: #e8e8e8;
+  height: 8px;
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 22px;
+}
+
+.techno ul li span small {
+  height: 8px;
+  max-width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-animation: barGrpah 2s linear;
+  -moz-animation: barGrpah 2s linear;
+  -o-animation: barGrpah 2s linear;
+  animation: barGrpah 2s linear;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+small {
+  font-size: 85%;
+}
+ .brackets {
+    background: #47484b;
+}
