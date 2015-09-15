@@ -43,7 +43,7 @@
 
   /*-- Grid Portfolio JavaScript
     ================================================== --*/
-
+/*
 $('ul.nav-pills li a').click(function (e) {
     $('ul.nav-pills li.active').removeClass('active')
     $(this).parent('li').addClass('active')
@@ -76,6 +76,7 @@ $(window).load(function () {
         return false;
     });
 });
+*/
 
   /*-- Scroll To JavaScript
     ================================================== --*/
@@ -99,14 +100,17 @@ $(function () {
     $(window).scroll(function(){
         var y = $(window).scrollTop();
  
-        if( y > 500 )
+        if( y > 400 )
         {
-            $(".navbar-default").css({'background-color':'#009688'});
-            $(".navbar-default .navbar-nav > li > a").css({'color':'#FFF'});
+            $(".navbar").css({'background-color':'#1ABC9C', 'border-bottom': '1px solid #e7e7e7'});
+            //$(".navbar .navbar-nav > li > a").css({'color':'#333'});
+            $(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent','color': '#1abc9c'}); 
             //$('#navbar').animate({ 'height': '60'}, {duration : 200, queue : false});
         } else {
-            $(".navbar-default").css({'background-color':'transparent'});
-            $(".navbar-default .navbar-nav > li > a").css({'color':'#FFF'});
+            $(".navbar").css({'background-color':'transparent', 'border-bottom':'none'});
+            $(".navbar .navbar-nav > li > a").css({'color':'#FFF'});
+            $(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent','color': '#1abc9c'});
+            
             //$('#navbar').animate({ 'height': '51'}, {duration : 200, queue : false});
 
         }
