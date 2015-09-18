@@ -1,7 +1,7 @@
 # Les ligne commençant par '#' sont des commentaires.
-# Ignorer tous les fichiers nommés foo.txt
+# Ignorer tous les fichiers nommés *.js
 gulpfile.js
-# Ignorer tous les fichiers html
+# Ignorer un dossier
 node_modules/
-# à l'exception de foo.html qui est maintenu à la main
+# Ignorer tous les fichiers SCSS
 scss/*.scss
