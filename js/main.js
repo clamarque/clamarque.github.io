@@ -102,7 +102,7 @@ $(function () {
  
         if( y > 400 )
         {
-            $(".navbar").css({'background-color':'#1ABC9C', 'border-bottom': '1px solid #e7e7e7'});
+            $(".navbar").css({'background-color':'#009688'});
             //$(".navbar .navbar-nav > li > a").css({'color':'#333'});
             $(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent','color': '#1abc9c'}); 
             //$('#navbar').animate({ 'height': '60'}, {duration : 200, queue : false});
@@ -118,3 +118,20 @@ $(function () {
         $('#result').html(y);
     });
 })
+ 
+ 
+ /*-- Show Div JavaScript
+    ================================================== --*/
+ 
+$(document).ready(function(){
+    $("#skill-up").click(function(){
+        $(".showSkill").hide("slow");
+        $("#skill-up").hide();
+        $("#skill-down").show();
+    });
+    $("#skill-down").click(function(){
+        $(".showSkill").show("slow");
+        $("#skill-down").hide();
+        $("#skill-up").show();
+    });
+});
