@@ -104,12 +104,12 @@ $(function () {
         {
             $(".navbar").css({'background-color':'#009688'});
             //$(".navbar .navbar-nav > li > a").css({'color':'#333'});
-            $(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent','color': '#1abc9c'}); 
+            //$(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent'}); 
             //$('#navbar').animate({ 'height': '60'}, {duration : 200, queue : false});
         } else {
             $(".navbar").css({'background-color':'transparent', 'border-bottom':'none'});
-            $(".navbar .navbar-nav > li > a").css({'color':'#FFF'});
-            $(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent','color': '#1abc9c'});
+           // $(".navbar .navbar-nav > li > a").css({'color':'#FFF'});
+           // $(".nav li.current a, .nav li.current a:hover, .nav li a:hover, .nav li a:focus").css({'background': 'transparent'});
             
             //$('#navbar').animate({ 'height': '51'}, {duration : 200, queue : false});
 
