@@ -135,3 +135,24 @@ $(document).ready(function(){
         $("#skill-up").show();
     });
 });
+
+ /*-- Show Div and scroll To position example JavaScript
+    ================================================== --*/
+    $(document).ready(function () {
+      //par défaut on masque les réponses
+    $(".k-page-faq__answer").hide();
+
+    $(".k-page-faq__question").click(function () {
+        hauteur = $(".k-page-faq__question").offset().top;
+        if ($(this).next().is(":visible") == false) {
+            // Masquage des réponses
+            $(".k-page-faq__answer").slideUp();
+            // Affichage de la réponse placée juste après dans le code HTML
+            $(this).next().slideDown("slow");
+            $('html,body').animate({
+                scrollTop: hauteur
+            }, 1000);
+        }
+    });
+});
+    
