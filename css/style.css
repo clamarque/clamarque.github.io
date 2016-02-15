@@ -251,7 +251,7 @@ A {
 }
 #about-me .skill__title{
     display: block;
-    margin-top: 35px;
+    margin: 35px 0;
 }
 
 /*
