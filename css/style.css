@@ -7,7 +7,8 @@ body {
     font-size: 14px;
     line-height: 26px;
     background: #305162;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    /*font-family: Roboto, Helvetica, Arial, sans-serif;*/
     overflow: visible;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased
@@ -32,13 +33,13 @@ h2 {
     line-height: 38px;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #666;
+    color: #FFF;
     margin-bottom: 16px;
     margin-top: 8px
 }
 
 h2 span {
-    color: #999;
+    color: #FFF;
     letter-spacing: 0;
     font-weight: 400;
     font-style: italic;
@@ -75,10 +76,10 @@ hr {
     margin-bottom: 0
 }
 
-.h2-spacer {
+.section__line {
     float: left;
     width: 90px;
-    border-top: 3px solid #e7e7e7
+    border-top: 3px solid #ED5A64;
 }
 
 A {
@@ -118,9 +119,17 @@ A {
 .icon-bar {
     border: 1px solid #FFF
 }
-.nav__current{
+
+.nav__current {
     color: #1abc9c;
 }
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: #ED5A64;
+}
+
 #section-home {
     color: #FFF;
     text-align: center;
@@ -139,6 +148,7 @@ A {
     height: 610px;
     margin-top: -80px
 }
+
 #section-home .home-wrap {
     padding: 220px 0 200px;
     color: #FFF;
@@ -160,12 +170,14 @@ A {
     text-decoration: none;
     font-size: 18px;
 }
+
 #section-home a:hover {
     border: 1px solid #1abc9c;
     color: #1abc9c;
 }
+
 #about-me {
-    background: #F9F9F9;
+    background: #FFF;
     width: 100%;
     padding: 10px 0
 }
@@ -249,42 +261,137 @@ A {
     font-size: 17px;
     padding-top: 22px
 }
-#about-me .skill__title{
+
+#about-me .skill__title {
     display: block;
-    margin: 35px 0;
+    margin: 35px 0 0;
 }
+
+.skill__title h1 {
+    font-size: 25px;
+}
+
+.skill__icon {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.skill__icon i {
+    margin-top: 20px;
+    margin-right: 32px;
+}
+
+.skill__detail {
+    display: table-cell;
+    width: 100%;
+    padding: 0 0 39px;
+}
+
+.skill__detail h1 {
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.33333;
+}
+
+.skill__detail p {
+    margin: 9px 0 0;
+    padding-right: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71429;
+}
+
+
+/* 
+* PORTFOLIO *
+*/
+
+.Portfolio {
+    padding: 70px 0;
+    background: #305162;
+}
+
+.Portfolio h2 span {
+    color: #1ABC9C;
+}
+
+.Portfolio #portfolio-items {
+    display: table
+}
+
+.Portfolio #portfolio-items ul {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.Portfolio #portfolio-items ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 11px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.Portfolio #portfolio-items ul .current-filter {
+    color: #FFF!important;
+    border-bottom: 1px solid #1abc9c
+}
+
+.Portfolio .worksItem {
+    display: none;
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+    background: #FFF;
+}
+
+.Portfolio .worksItem img {
+    width: 100%;
+    height: auto
+}
+
+.Portfolio .worksItem a {
+    color: #1abc9c
+}
+
+.worksItem .portfolio-hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden
+}
+
 
 /*
 * CV *
 */
 
 #Resume {
-    background-color: #f7f8fa;
+    background-color: #1ABC9C;
     padding: 50px 0;
     position: relative
 }
 
-#Resume h2 {
-    font-size: 26px;
-    line-height: 38px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: #666;
-    margin-bottom: 16px;
-    margin-top: 8px
+#Resume h2 span {
+    color: #305162;
 }
 
-#Resume h2 span {
-    font-size: 16px;
-    line-height: 38px;
-    font-weight: 400;
-    font-style: italic;
-    color: #999
+.myresumeblock p {
+    color: #FFF;
 }
 
 #Resume .myresumeL {
     text-align: right;
-    border-right: 1px solid #eee
+    border-right: 1px solid #FFF;
 }
 
 #Resume .myresumeR {
@@ -293,8 +400,7 @@ A {
 
 #Resume .myresumeR h3,
 #Resume .myresumeL h3 {
-    color: #555;
-    font-size: 18px
+    color: #305162;
 }
 
 #Resume .myresumeR ul,
@@ -315,14 +421,13 @@ A {
     color: #555;
     float: left;
     font-size: 30px;
-    margin-right: 16px;
-    margin-top: 2px;
+    margin: 2px 16px 0 0;
     padding: 7px
 }
 
 #Resume .myresumeR ul li h5,
 #Resume .myresumeL ul li h5 {
-    color: #555;
+    color: #FFF;
     font-size: 12px;
     font-style: italic;
     font-weight: 800
@@ -343,68 +448,6 @@ A {
     font-size: 12px;
     text-transform: lowercase
 }
-/* 
-* PORTFOLIO *
-*/
-
-.Portfolio {
-    padding: 70px 0;
-    background: #FFF
-}
-
-.Portfolio #portfolio-items {
-    display: table
-}
-
-.Portfolio #portfolio-items ul {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 50px
-}
-
-.Portfolio #portfolio-items ul li {
-    display: inline-block;
-    cursor: pointer;
-    padding: 5px;
-    margin: 0 10px;
-    font-weight: 400;
-    font-size: 11px;
-    text-transform: uppercase;
-    -webkit-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-    letter-spacing: 3px;
-    color: #777
-}
-
-.Portfolio #portfolio-items ul .current-filter {
-    color: #333!important;
-    border-bottom: 1px solid #1abc9c
-}
-
-.Portfolio .worksItem {
-    display: none;
-    padding: 0;
-    overflow: hidden;
-    height: auto;
-    text-align: center
-}
-
-.Portfolio .worksItem img {
-    width: 100%;
-    height: auto
-}
-
-.Portfolio .worksItem a {
-    color: #1abc9c
-}
-
-.worksItem .portfolio-hover-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: hidden
-}
-
 
 @media only screen and (max-width:970px) {
     .nav li.current a:hover,
@@ -470,129 +513,18 @@ A {
     }
 }
 
-/**** TEST */
-
-
-.new-container {
-    margin: 0 20px;
-    overflow: hidden;
-    *zoom: 1
+.col-xs-12 .skill__icon,
+.col-xs-12 .skill__detail {
+    display: block;
+    text-align: center;
 }
 
-.site-content {
-    padding-top: 66px
+.col-xs-12 .skill__icon {
+    margin-left: 35px;
 }
-
-.header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 66px;
-    line-height: 66px;
-    color: #FFF;
+.col-xs-12.worksItem{
+    margin-top: 35px;
 }
-
-.header__logo {
-    font-weight: bold;
-    padding: 0 25px;
-    float: left
+.row{
+    margin: 0;
 }
-
-.menu {
-    float: left
-}
-
-.menu a {
-    padding: 0 10px
-}
-
-.menu a:hover {
-    color: #c6ff00
-}
-
-/**/
-    .site-pusher,
-    .site-container {
-        height: 100%
-    }
-    .site-container {
-        overflow: hidden
-    }
-    .site-pusher {
-        -moz-transition-duration: 0.3s;
-        -o-transition-duration: 0.3s;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -moz-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px)
-    }
-    .site-content {
-        position: absolute;
-        top: 66px;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        padding-top: 0;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch
-    }
-    .header {
-      /*position: static*/
-    }
-    .header__icon {
-        position: relative;
-        display: block;
-        float: right;
-        width: 50px;
-        height: 66px;
-        cursor: pointer
-    }
-    .header__icon:after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 1rem;
-        height: 0;
-        top: 16px;
-        left: 15px;
-        -moz-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
-        -webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
-        box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff
-    }
-    .menu {
-        position: fixed;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        background-color: #2a378b;
-        width: 250px;
-        -moz-transform: translateX(250px);
-        -ms-transform: translateX(250px);
-        -webkit-transform: translateX(250px);
-        transform: translateX(250px)
-    }
-    .menu a {
-        display: block;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        border-bottom: 1px solid #303f9f
-    }
-    .with--sidebar .site-pusher {
-        -moz-transform: translateX(-250px);
-        -ms-transform: translateX(-250px);
-        -webkit-transform: translateX(-250px);
-        transform: translateX(-250px)
-    }
-    .with--sidebar .site-cache {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6)
-    }
