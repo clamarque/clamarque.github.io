@@ -269,6 +269,7 @@ A {
 
 .skill__title h1 {
     font-size: 25px;
+    line-height: 0;
 }
 
 .skill__icon {
