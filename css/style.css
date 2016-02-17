@@ -272,18 +272,12 @@ A {
     line-height: 0;
 }
 
-.skill__icon {
-    display: table-cell;
-    vertical-align: top;
-}
-
 .skill__icon i {
     margin-top: 20px;
     margin-right: 32px;
 }
 
 .skill__detail {
-    display: table-cell;
     width: 100%;
     padding: 0 0 39px;
 }
@@ -297,9 +291,6 @@ A {
 
 .skill__detail p {
     margin: 9px 0 0;
-    padding-right: 32px;
-    font-weight: 400;
-    font-size: 14px;
     line-height: 1.71429;
 }
 
@@ -370,6 +361,18 @@ A {
     left: 0;
     visibility: hidden
 }
+.worksItem:hover .portfolio-hover-content {
+    visibility: visible;
+    padding: 64px 24px;
+    width: 100%;
+    height: 100%;
+    background: #414042;
+    color: #fff;
+    font-size: 14px;
+    opacity: .9;
+    filter: alpha(opacity=90);
+    cursor: pointer;
+}
 
 
 /*
@@ -377,22 +380,22 @@ A {
 */
 
 #Resume {
-    background-color: #1ABC9C;
+    background-color: #FFF;
     padding: 50px 0;
     position: relative
+}
+
+#Resume h2 {
+    color: #1abc9c;
 }
 
 #Resume h2 span {
     color: #305162;
 }
 
-.myresumeblock p {
-    color: #FFF;
-}
-
 #Resume .myresumeL {
     text-align: right;
-    border-right: 1px solid #FFF;
+    border-right: 1px solid #ED5A64;
 }
 
 #Resume .myresumeR {
@@ -445,20 +448,14 @@ A {
 
 #Resume .myresumeR ul li h4 i,
 #Resume .myresumeL ul li h4 i {
-    color: #777;
+    color: #1ABC9C;
     font-size: 12px;
-    text-transform: lowercase
+    text-transform: lowercase;
+    font-weight: bold;
 }
-
-@media only screen and (max-width:970px) {
-    .nav li.current a:hover,
-    .nav li a:focus,
-    .nav li a:hover {
-        color: #FFF;
-        background: #1abc9c
-    }
-}
-
+/*
+* FOOTER *
+*/
 .footer {
     line-height: 20px;
     padding-top: 34px;
@@ -478,25 +475,9 @@ A {
     font-size: 20px
 }
 
-.worksItem:hover .portfolio-hover-content {
-    color: #fff;
-    font-size: 14px;
-    opacity: .9;
-    filter: alpha(opacity=90);
-    visibility: visible;
-    background: #414042;
-    padding: 64px 24px;
-    width: 100%;
-    cursor: pointer;
-    height: 100%
-}
-
-@media only screen and (max-width:970px) {
-    h1 {
-        font-size: 45px;
-        line-height: 35px
-    }
-}
+/*
+* RESPONSIVE *
+*/
 
 @media screen and (max-width:480px) {
     h1 {
@@ -509,23 +490,46 @@ A {
     body>div>div>div.navbar-collapse.collapse.in {
         background-color: rgba(33, 33, 33, .9)
     }
-    .navbar .navbar-nav {
-        color: #FFF
+    .skill__icon,
+    .skill__detail {
+        display: block;
+        text-align: center;
     }
 }
 
-.col-xs-12 .skill__icon,
-.col-xs-12 .skill__detail {
-    display: block;
-    text-align: center;
+@media (min-width: 769px) {
+    .skill__icon {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .skill__detail {
+        display: table-cell;
+        text-align: left;
+    }
+}
+@media only screen and (max-width:970px) {
+    .nav li.current a:hover,
+    .nav li a:focus,
+    .nav li a:hover {
+        color: #FFF;
+        background: #1abc9c;
+    }
+    h1{
+        font-size: 45px;
+        line-height: 35px;
+    }
+    
+            
 }
 
 .col-xs-12 .skill__icon {
     margin-left: 35px;
 }
-.col-xs-12.worksItem{
+
+.col-xs-12.worksItem {
     margin-top: 35px;
 }
-.row{
+
+.row {
     margin: 0;
 }
