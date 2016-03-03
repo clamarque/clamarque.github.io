@@ -97,10 +97,11 @@ A {
 }
 
 .navbar {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%
+    width: 100%;
 }
 
 .nav li.current a,
@@ -150,7 +151,7 @@ A {
 }
 
 #section-home .home-wrap {
-    padding: 220px 0 200px;
+    padding: 100px 0 200px;
     color: #FFF;
 }
 
@@ -361,6 +362,7 @@ A {
     left: 0;
     visibility: hidden
 }
+
 .worksItem:hover .portfolio-hover-content {
     visibility: visible;
     padding: 64px 24px;
@@ -453,9 +455,12 @@ A {
     text-transform: lowercase;
     font-weight: bold;
 }
+
+
 /*
 * FOOTER *
 */
+
 .footer {
     line-height: 20px;
     padding-top: 34px;
@@ -474,6 +479,38 @@ A {
     text-align: right;
     font-size: 20px
 }
+
+.navbar-brand img {
+    padding: 8px 15px;
+    width: 100px;
+}
+
+.img__logo {
+    margin: 0 auto 0 auto;
+    max-height: 200px;
+    margin-bottom: 15px;
+}
+
+.navbar-logo {
+    padding: 7px 0 7px 0;
+    width: 50px;
+}
+
+.navbar-brand {
+    padding: 23px 0 0 25px;
+    color: #16A085;
+    font-size: 24px;
+    transition-duration: 0.7s;
+}
+
+.navbar-collapse {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding-top: 7px;
+    overflow: hidden;
+}
+
 
 /*
 * RESPONSIVE *
@@ -495,6 +532,14 @@ A {
         display: block;
         text-align: center;
     }
+    .navbar-logo {
+        padding: 5px 0 0 15px;
+        width: 55px;
+    }
+    .navbar-brand {
+        top: -9px;
+        position: relative;
+    }
 }
 
 @media (min-width: 769px) {
@@ -507,6 +552,7 @@ A {
         text-align: left;
     }
 }
+
 @media only screen and (max-width:970px) {
     .nav li.current a:hover,
     .nav li a:focus,
@@ -514,12 +560,10 @@ A {
         color: #FFF;
         background: #1abc9c;
     }
-    h1{
+    h1 {
         font-size: 45px;
         line-height: 35px;
     }
-    
-            
 }
 
 .col-xs-12 .skill__icon {
