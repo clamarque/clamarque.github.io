@@ -339,7 +339,7 @@ footer img {
 
 @media screen and (max-width:768px) {
     #section-home .home-wrap {
-        padding: 0;
+        /*padding: 0;*/
     }
     .img-responsive {
         display: initial;
