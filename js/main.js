@@ -102,6 +102,7 @@
 
           if (y > 400) {
               $('.navbar').fadeIn(300);
+       
 
               $(".navbar").css({
                   'background-color': '#305162'
@@ -133,11 +134,15 @@
               });
           }
           if ($(window).width() > 767) {
+                $('.scrollpoint.sp-effect3').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'90%'});
               if ($(this).scrollTop() > 600) {
-                  $('.scroll-up').fadeIn(300);
+                  $('.scroll-up').fadeIn(300);   
               } else {
                   $('.scroll-up').fadeOut(300);
               }
+          }
+          if($(window).width() > 767) {
+              
           }
           $('#result').html(y);
       });
