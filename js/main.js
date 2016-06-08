@@ -133,6 +133,7 @@
                   queue: false
               });
           }
+          /*
           if ($(window).width() > 767) {
                 $('.scrollpoint.sp-effect3').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'90%'});
               if ($(this).scrollTop() > 600) {
@@ -145,7 +146,7 @@
               
           }
           $('#result').html(y);
-      });
+      });*/
   })
 
 
