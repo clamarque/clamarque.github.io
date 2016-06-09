@@ -4,8 +4,6 @@ body {
     padding: 0;
     width: 100%;
     background: url('../img/background-2.jpg') no-repeat center top fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
@@ -336,6 +334,12 @@ footer img {
     h1 {
         font-size: 35px;
         line-height: 35px
+    }
+}
+@media screen and (min-width: 768px) {
+    body{
+         background-size: cover;
+         -webkit-background-size: cover;
     }
 }
 
