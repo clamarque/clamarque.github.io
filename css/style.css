@@ -1,12 +1,11 @@
 html,
 body {
-    -webkit-overflow-scrolling: touch;
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
     background: url('../img/background-2.jpg') center top fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
 }
@@ -190,7 +189,7 @@ p {
 }
 
 #section-home .home-wrap {
-    padding: 100px 0 200px;
+    padding: 100px 0;
 }
 
 #section-home p {
