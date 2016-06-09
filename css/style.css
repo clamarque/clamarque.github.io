@@ -259,8 +259,9 @@ p {
 .worksItem {
     margin: 30px 0;
 }
-.worksItem .img-responsive{
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
+
+.worksItem .img-responsive {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 #section-portfolio .row > a {
@@ -271,9 +272,39 @@ p {
     border: 1px solid #1abc9c;
     background: #1abc9c;
 }
+
 #section-portfolio .row > a:hover {
     background: #FFF;
     color: #1abc9c;
+}
+
+
+/* Isotope Transitions
+------------------------------- */
+
+.isotope,
+.isotope .item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: top, left, opacity;
+    transition-property: transform, opacity;
 }
 
 
@@ -327,7 +358,7 @@ footer img {
 */
 
 @media screen and (max-width:480px) {
-    body{
+    body {
         background-size: initial;
         -webkit-background-size: initial;
     }
@@ -336,10 +367,11 @@ footer img {
         line-height: 35px
     }
 }
+
 @media screen and (min-width: 768px) {
-    body{
-         background-size: cover;
-         -webkit-background-size: cover;
+    body {
+        background-size: cover;
+        -webkit-background-size: cover;
     }
 }
 

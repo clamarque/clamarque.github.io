@@ -48,9 +48,7 @@
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <h2>About me</h2>
                 <hr class="section__line">
-                <p>I'm a 25 years old and i study at EPSI, a school IT in Lille, and I work at SOGETI. Developer and integrator,
-                    I am self-taught, curious and above all passionate about the web and its technologies since 3 years.
-                    I make sure to be up to date in <strong>web technology</strong> to get the best result.</p>
+                <p>I'm a 25 years old and i study at EPSI, a school IT in Lille, and I work at SOGETI. Developer and integrator, I am self-taught, curious and above all passionate about the web and its technologies since 3 years. I make sure to be up to date in <strong>web technology</strong> to get the best result.</p>
                 <p>Don't hesitate to check out my work below</p>
             </div>
         </div>
@@ -73,43 +71,44 @@
                 <hr class="section__line">
                 <div id="section-portfolio__items">
                     <ul>
-                        <li class="filter current-filter" data-filter="all">All</li>
-                        <li class="filter" data-filter=".Category1">Web Design</li>
-                        <li class="filter" data-filter=".Category2">Application web</li>
+                        <li class="filter current-filter" data-filter="*">All</li>
+                        <li class="filter" data-filter=".showcase">Showcase</li>
+                        <li class="filter" data-filter=".design">Design</li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 worksItem Category1">
-                    <a href="http://www.chateaudescimes.com/" target="_blank">
-                        <img class="img-responsive" src="img/1.png" alt="work">
-                    </a>
-                    <div class="portfolio-hover-content">
-                        <h4>Château des cîmes</h4>
-                        <p>Lieu de rencontre incontournable pour les professionnels de l'implantologie du Nord-Pas-De-Calais</p>
+                <div id="posts">
+                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem item showcase">
+                        <a href="http://www.chateaudescimes.com/" target="_blank">
+                            <img class="img-responsive" src="img/1.png" alt="work">
+                        </a>
+                        <div class="portfolio-hover-content">
+                            <h4>Château des cîmes</h4>
+                            <p>Lieu de rencontre incontournable pour les professionnels de l'implantologie du Nord-Pas-De-Calais</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 worksItem Category2">
-                    <a href="http://www.parenthesechampetre.fr/" target="_blank">
-                        <img class="img-responsive" src="img/2.png" alt="work">
-                    </a>
-                    <div class="portfolio-hover-content">
-                        <h4>Parenthèse Champêtre</h4>
-                        <p>Gîte de Jean-pierre et d'Isabelle Danet</p>
+                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem item showcase">
+                        <a href="http://www.parenthesechampetre.fr/" target="_blank">
+                            <img class="img-responsive" src="img/2.png" alt="work">
+                        </a>
+                        <div class="portfolio-hover-content">
+                            <h4>Parenthèse Champêtre</h4>
+                            <p>Gîte de Jean-pierre et d'Isabelle Danet</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 worksItem Category2">
-                    <a href="http://linae.org/" target="_blank">
-                        <img class="img-responsive" src="img/3.jpg" alt="work">
-                    </a>
-                    <div class="portfolio-hover-content">
-                        <h4>Portfolio de Linaë</h4>
-                        <p>Linaë, Graphiste freelance</p>
+                    <div class="col-md-4 col-sm-4 col-xs-12 worksItem item design">
+                        <a href="http://linae.org/" target="_blank">
+                            <img class="img-responsive" src="img/3.jpg" alt="work">
+                        </a>
+                        <div class="portfolio-hover-content">
+                            <h4>Portfolio de Linaë</h4>
+                            <p>Linaë, Graphiste freelance</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <a href="https://github.com/Clamarque">See all my open-source projects</a>
             </div>
-        </div>
         </div>
     </section>
 
@@ -138,15 +137,22 @@
         <div class="container">
             <div class="row text-center">
                 <img src="img/C.png" alt="logo">
-                <a href="https://github.com/Clamarque" class="btn btn-round btn-clear btn-github" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
-                <a href="https://twitter.com/Cha_lamarque" class="btn btn-round btn-clear btn-twitter" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                <a href="https://www.linkedin.com/" class="btn btn-round btn-clear btn-linkedin" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                <a href="https://github.com/Clamarque" class="btn btn-round btn-clear btn-github" target="_blank">
+                    <i class="fa fa-github-alt fa-2x"></i>
+                </a>
+                <a href="https://twitter.com/Cha_lamarque" class="btn btn-round btn-clear btn-twitter" target="_blank">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="btn btn-round btn-clear btn-linkedin" target="_blank">
+                    <i class="fa fa-linkedin-square fa-2x"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
