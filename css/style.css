@@ -329,6 +329,10 @@ footer img {
 */
 
 @media screen and (max-width:480px) {
+    htlm,body{
+        background-size: initial;
+        -webkit-background-size: initial;
+    }
     h1 {
         font-size: 35px;
         line-height: 35px
