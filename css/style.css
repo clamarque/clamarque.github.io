@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: url('../img/background-2.jpg') center top fixed;
+    background: url('../img/background-2.jpg') no-repeat center top fixed;
     background-size: cover;
     -webkit-background-size: cover;
     font-size: 14px;
