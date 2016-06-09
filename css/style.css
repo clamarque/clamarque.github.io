@@ -329,7 +329,7 @@ footer img {
 */
 
 @media screen and (max-width:480px) {
-    htlm,body{
+    body{
         background-size: initial;
         -webkit-background-size: initial;
     }
