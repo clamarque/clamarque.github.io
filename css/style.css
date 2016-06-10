@@ -20,7 +20,8 @@ body {
 }
 
 a {
-    color: #FFF
+    color: #FFF;
+    text-transform: uppercase;
 }
 
 a:hover {
@@ -268,8 +269,9 @@ p {
     display: block;
     margin: 50px auto 0;
     padding: 12px 24px;
-    width: 250px;
+    width: 300px;
     border: 1px solid #1abc9c;
+    border-radius: 2px;
     background: #1abc9c;
 }
 
@@ -323,6 +325,7 @@ p {
     width: 200px;
     border: 1px solid #1abc9c;
     background: #1abc9c;
+    border-radius: 2px;
 }
 
 #section-contact a:hover {
