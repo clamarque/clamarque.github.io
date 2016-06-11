@@ -355,6 +355,13 @@ footer img {
         font-size: 35px;
         line-height: 35px
     }
+    #section-portfolio__items ul {
+        padding: 0;
+    }
+    #section-portfolio__items ul li {
+        display: block;
+        margin: 15px 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
