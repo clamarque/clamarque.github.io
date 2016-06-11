@@ -96,11 +96,8 @@ p {
     background-color: #FFF;
     content: '';
     -webkit-transform: skewY(-2deg);
-    -moz-transform: skewY(-2deg);
-    -ms-transform: skewY(-2deg);
     transform: skewY(-2deg);
     -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
 }
@@ -108,7 +105,6 @@ p {
 .section:after {
     background-color: #FFF;
     -webkit-transform-origin: 100% 0;
-    -moz-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
 }
@@ -138,11 +134,9 @@ p {
 
 .btn.btn-clear {
     -webkit-transition-duration: .8s;
-    -moz-transition-duration: .8s;
     -o-transition-duration: .8s;
     transition-duration: .8s;
     -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
     -o-transition-property: -o-transform;
     transition-property: transform
 }
@@ -151,7 +145,6 @@ p {
 .btn.btn-clear:hover {
     background: #FFF;
     -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg)
 }
 
@@ -289,7 +282,6 @@ p {
 .isotope,
 .isotope .item {
     -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
     -ms-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
@@ -297,7 +289,6 @@ p {
 
 .isotope {
     -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
     -ms-transition-property: height, width;
     -o-transition-property: height, width;
     transition-property: height, width;
@@ -305,7 +296,6 @@ p {
 
 .isotope .item {
     -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
     -ms-transition-property: -ms-transform, opacity;
     -o-transition-property: top, left, opacity;
     transition-property: transform, opacity;
