@@ -134,10 +134,8 @@ p {
 
 .btn.btn-clear {
     -webkit-transition-duration: .8s;
-    -o-transition-duration: .8s;
     transition-duration: .8s;
     -webkit-transition-property: -webkit-transform;
-    -o-transition-property: -o-transform;
     transition-property: transform
 }
 
@@ -145,7 +143,7 @@ p {
 .btn.btn-clear:hover {
     background: #FFF;
     -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg)
+    transform: rotate(360deg);
 }
 
 .btn-twitter:hover {
@@ -283,21 +281,18 @@ p {
 .isotope .item {
     -webkit-transition-duration: 0.8s;
     -ms-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
 }
 
 .isotope {
     -webkit-transition-property: height, width;
     -ms-transition-property: height, width;
-    -o-transition-property: height, width;
     transition-property: height, width;
 }
 
 .isotope .item {
     -webkit-transition-property: -webkit-transform, opacity;
     -ms-transition-property: -ms-transform, opacity;
-    -o-transition-property: top, left, opacity;
     transition-property: transform, opacity;
 }
 
