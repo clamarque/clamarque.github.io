@@ -350,7 +350,6 @@ footer img {
 @media screen and (max-width:480px) {
     body {
         background-size: initial;
-        -webkit-background-size: initial;
     }
     h1 {
         font-size: 35px;
@@ -361,7 +360,6 @@ footer img {
 @media screen and (min-width: 768px) {
     body {
         background-size: cover;
-        -webkit-background-size: cover;
     }
 }
 
