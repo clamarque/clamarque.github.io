@@ -263,13 +263,13 @@ p {
     margin: 50px auto 0;
     padding: 12px 24px;
     width: 300px;
-    border: 1px solid #1abc9c;
     border-radius: 2px;
     background: #1abc9c;
 }
 
 #section-portfolio .row > a:hover {
     background: #FFF;
+    border: 1px solid #1abc9c;
     color: #1abc9c;
 }
 
@@ -310,7 +310,6 @@ p {
     margin: 50px auto 0;
     padding: 12px 24px;
     width: 200px;
-    border: 1px solid #1abc9c;
     background: #1abc9c;
     border-radius: 2px;
 }
@@ -318,6 +317,7 @@ p {
 #section-contact a:hover {
     background: #FFF;
     color: #1abc9c;
+    border: 1px solid #1abc9c;
 }
 
 
