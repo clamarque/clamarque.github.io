@@ -6,7 +6,7 @@ var api = '/users/' + username + '/repos';
 //function init repository 
 $(function () {
     $.ajax({
-        url: apiDomain + api + '?sort=updated&access_token=289bf48a2a4e97b610729dae848a653b3bfb9bba',
+        url: apiDomain + api + '?sort=updated&client_secret=1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e',
         dataType: 'json',
         success: function (data, status, error) {
             if (data.length > 0) {
