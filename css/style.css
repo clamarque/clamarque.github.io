@@ -8,7 +8,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
 /*
 * GLOBAL *
 */
@@ -17,6 +16,7 @@ body {
     position: relative;
     z-index: 5;
     padding: 50px 0;
+    text-align: center;
 }
 
 a {
@@ -75,7 +75,7 @@ p {
 
 .row {
     margin: 0;
-    padding: 0 15px;
+    /*padding: 0 15px;*/
 }
 
 .section__line {
@@ -107,6 +107,11 @@ p {
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
 }
 
 
@@ -166,12 +171,6 @@ p {
 #section-home {
     width: 100%;
     color: #FFF;
-}
-
-#section-home .overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .3);
 }
 
 #section-home .section__line {
@@ -248,22 +247,39 @@ p {
     color: #525856;
 }
 
-.worksItem {
-    margin: 30px 0;
-}
-
-.worksItem .img-responsive {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-}
-#posts {
+#repos {
     min-height: 450px !important;
 }
+#repos .item {
+    margin: 30px 0;
+}
+#repos a {
+    display: block;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 1px rgba(0, 0, 0, 0.12);
+    color: #FFF;
+    min-height: 210px;
+    background-size: cover;
+}
+#repos a > img {
+    width: 150px;
+}
+#repos h4 {
+    color: #555;
+}
+#repos h5 {
+    color: #1abc9c;
+}
+#repos p {
+    text-transform: lowercase;
+}
+/* Button see all */
 #section-portfolio .row > a {
     display: block;
     margin: 50px auto 0;
     padding: 12px 24px;
     width: 300px;
     border-radius: 2px;
+    border: 1px solid #1abc9c;
     background: #1abc9c;
 }
 
@@ -272,7 +288,6 @@ p {
     border: 1px solid #1abc9c;
     color: #1abc9c;
 }
-
 
 /* Isotope Transitions
 ------------------------------- */
@@ -296,7 +311,6 @@ p {
     transition-property: transform, opacity;
 }
 
-
 /*
 * SECTION CONTACT *
 */
@@ -311,6 +325,7 @@ p {
     padding: 12px 24px;
     width: 200px;
     background: #1abc9c;
+    border: 1px solid #1abc9c;
     border-radius: 2px;
 }
 

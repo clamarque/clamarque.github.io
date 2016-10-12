@@ -1,228 +1,103 @@
-  /*-- Circle JavaScript
-      ================================================== --*/
-  (function ($) {
+//Init var
+var apiDomain = 'https://api.github.com';
+var username = 'clamarque';
+var api = '/users/' + username + '/repos';  
 
-      $('input.round').wrap('<div class="round" />').each(function () {
-          var $input = $(this);
-          var $div = $input.parent();
-          var min = $input.data('min');
-          var max = $input.data('max');
-          var ratio = ($input.val() - min) / (max - min);
-          var color = $input.data('color') ? $input.data('color') : "rgba(33,33,33,0.6)";
+//function init repository 
+$(function () {
+    $.ajax({
+        url: apiDomain + api + '?sort=updated&access_token=fae5a43e937f4145be8459a8c0406b29d5a68588',
+        dataType: 'json',
+        success: function (data, status, error) {
+            if (data.length > 0) {
+                for (var i = 0; i < 6; i++) {
+                    var repo = data[i];
+                    console.log(repo);
+                    //add repository
+                    addRepos(repo);
+                }
+                var divs = $("#repos > div");
+                for (var i = 0; i < divs.length; i += 3) {
+                    divs.slice(i, i + 3).wrapAll("<div class='row'></div>");
+                }
+            }
+        },
+        error: function (data, status, error) {
+            console.log('error', data, status, error);
+        }
+    }).then(function () {
+        //add filter
+        filterRepos();
+    })
+});
 
-          var $circle = $('<canvas width="150px" height="150px"/>');
-          var $color = $('<canvas width="150px" height="150px"/>');
-          $div.append($circle);
-          $div.append($color);
-          var ctx = $circle[0].getContext('2d');
+//create repository
+function addRepos(repo) {
+    var $container = $('<div>').addClass('col-md-4 col-sm-4 col-xs-12 worksItem item ' + repo.language);
+    var $link = $('<a>').attr('href', repo.svn_url).appendTo($container);
 
-          // On dessine le cercle blanc avec ombre porté
-          ctx.beginPath();
-          ctx.arc(75, 75, 50, 0, 2 * Math.PI);
-          ctx.lineWidth = 3; //epaisseur
-          ctx.strokeStyle = "rgba(225,255,255,0.3)"
-          ctx.shadowOffsetX = 2;
-          ctx.shadowBlur = 6;
-          ctx.shadowColor = "rgba(0,0,0,0.1)";
-          ctx.stroke();
+    $.ajax({
+        url: 'https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg',
+        success: function (data, status, error) {
+            $link.append('<p></p>');
+            $link.append('<img src="https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg" />');
+            $link.append('<p><i class="fa fa-star" aria-hidden="true"></i>' + repo.stargazers_count + '</p>');
+            $link.append('<h5>' + repo.language + '</h5>');
+            $link.append('<p>' + repo.description + '</p>');
+            
 
+            $container.append($link);
+        },
+        error: function (data, status, error) {
+            $link.append('<h4>' + repo.name + '</h4>');
+            $link.append('<p><i class="fa fa-star" aria-hidden="true"></i> ' + repo.stargazers_count + '</p>');
+            $link.append('<h5>' + repo.language + '</h5>');
+            $link.append('<p>' + repo.description + '</p>');
 
-          // On dessine le cercle de couleur
-          var ctx = $color[0].getContext('2d');
-          ctx.arc(75, 75, 50, -1 / 2 * Math.PI, ratio * 2 * Math.PI - 1 / 2 * Math.PI);
-          ctx.lineWidth = 3;
-          ctx.strokeStyle = color;
-          ctx.stroke();
+            $container.append($link);
+        }
+    })
+    $container.appendTo('#repos');
+}
 
+// Init filter for repository
+function filterRepos() {
 
-
-
-      })
-
-  })(jQuery);
-
-  /*-- Grid Portfolio JavaScript
-    ================================================== --*/
-  /*
-  $('ul.nav-pills li a').click(function (e) {
-      $('ul.nav-pills li.active').removeClass('active')
-      $(this).parent('li').addClass('active')
-  })
-
-  $(window).load(function () {
-      var $container = $('.grid-wrapper');
-      $container.isotope({
-          filter: '*',
-          animationOptions: {
-              duration: 750,
-              easing: 'linear',
-              queue: false
-          }
-      });
-
-      $('.grid-controls li a').click(function () {
-          $('.grid-controls .current').removeClass('current');
-          $(this).addClass('current');
-
-          var selector = $(this).attr('data-filter');
-          $container.isotope({
-              filter: selector,
-              animationOptions: {
-                  duration: 750,
-                  easing: 'linear',
-                  queue: false
-              }
-          });
-          return false;
-      });
-  });
-  */
-
-  /*-- Scroll To JavaScript
-    ================================================== --*/
-  $(function () {
-      $('a[href*=#]:not([href=#])').click(function () {
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-              if (target.length) {
-                  $('html,body').animate({
-                      scrollTop: target.offset().top
-                  }, 1000);
-                  return false;
-              }
-          }
-      });
-  });
-  /*-- Scroll CSS JavaScript
-    ================================================== --*/
-  $(document).ready(function () {
-      $(window).scroll(function () {
-          var y = $(window).scrollTop();
-
-          if (y > 400) {
-              $('.navbar').fadeIn(300);
-       
-
-              $(".navbar").css({
-                  'background-color': '#305162'
-              });
-              $(".navbar-nav>li>a").click(function () {
-                  $(".navbar-nav>li>a").each(function () {
-                      $(this).removeClass('.nav__current');
-                  });
-                  $(this).addClass('.nav__current');
-              });
-              $('#navbar').animate({
-                  'height': '60'
-              }, {
-                  duration: 200,
-                  queue: false
-              });
-          } else {
-              $('.navbar').fadeOut(300);
-
-              $(".navbar").css({
-                  'background-color': 'transparent',
-                  'border-bottom': 'none'
-              });
-              $('#navbar').animate({
-                  'height': '51'
-              }, {
-                  duration: 200,
-                  queue: false
-              });
-          }
-          /*
-          if ($(window).width() > 767) {
-                $('.scrollpoint.sp-effect3').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'90%'});
-              if ($(this).scrollTop() > 600) {
-                  $('.scroll-up').fadeIn(300);   
-              } else {
-                  $('.scroll-up').fadeOut(300);
-              }
-          }
-          if($(window).width() > 767) {
-              
-          }*/
-          $('#result').html(y);
-      });
-  })
-
-
-  /*-- Show Div JavaScript
-     ================================================== --*/
-
-  $(document).ready(function () {
-      $("#skill-up").click(function () {
-          $(".showSkill").hide("slow");
-          $("#skill-up").hide();
-          $("#skill-down").show();
-      });
-      $("#skill-down").click(function () {
-          $(".showSkill").show("slow");
-          $("#skill-down").hide();
-          $("#skill-up").show();
-      });
-  });
-
-  /*-- Show Div and scroll To position example JavaScript
-     ================================================== --*/
-  $(document).ready(function () {
-      //par défaut on masque les réponses
-      $(".k-page-faq__answer").hide();
-
-      $(".k-page-faq__question").click(function () {
-          hauteur = $(".k-page-faq__question").offset().top;
-          if ($(this).next().is(":visible") == false) {
-              // Masquage des réponses
-              $(".k-page-faq__answer").slideUp();
-              // Affichage de la réponse placée juste après dans le code HTML
-              $(this).next().slideDown("slow");
-              $('html,body').animate({
-                  scrollTop: hauteur
-              }, 1000);
-          }
-      });
-  });
-
-  (function ($) {
-
-      $('#header__icon').click(function (e) {
-          e.preventDefault();
-          $('body').toggleClass('with--sidebar');
-      });
-
-      $('#site-cache').click(function (e) {
-          $('body').removeClass('with--sidebar');
-      })
-
-  })(jQuery);
-
-
-  /*-- ISOTOPE portfolio
-     ================================================== --*/
-
-  $( document ).ready(function() {
-  /* activate jquery isotope */
-  var $container = $('#posts').isotope({
-    itemSelector : '.item',
-    isFitWidth: true
-  });
-
-  $(window).smartresize(function(){
-    $container.isotope({
-      columnWidth: '.col-sm-3'
+    var $container1 = $('#repos').isotope({
+        itemSelector: '.item',
+        isFitWidth: true
     });
-  });
-  
-  $container.isotope({ filter: '*' });
 
-    // filter items on button click
-  $('#section-portfolio__items').on( 'click', 'li', function() {
-    var filterValue = $(this).attr('data-filter');
-    $container.isotope({ filter: filterValue });
-    $('#section-portfolio__items').find('.current-filter').removeClass('current-filter');
-    $( this ).addClass('current-filter');
-  });
+    $(window).smartresize(function () {
+        $container1.isotope({
+            columnWidth: '.col-sm-4'
+        });
+    });
+
+    $container1.isotope({ filter: '*' });
+
+    //filter items on button click 
+    $('#section-portfolio__items').on('click', 'li', function () {
+        var filterValue = $(this).attr('data-filter');
+        $container1.isotope({ filter: filterValue });
+        $('#section-portfolio__items').find('.current-filter').removeClass('current-filter');
+        $(this).addClass('current-filter');
+    });
+}
+
+/*-- Scroll To JavaScript
+  ================================================== --*/
+$(function () {
+    $('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
 });
