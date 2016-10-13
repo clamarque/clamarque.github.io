@@ -40,7 +40,7 @@ function addRepos(repo) {
         url: 'https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.png',
         success: function (data, status, error) {
             $link.append('<p></p>');
-            $link.append('<img src="https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg" />');
+            $link.append('<img src="https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.png" />');
             $link.append('<p><i class="fa fa-star" aria-hidden="true"></i>' + repo.stargazers_count + '</p>');
             $link.append('<h5>' + repo.language + '</h5>');
             $link.append('<p>' + repo.description + '</p>');
