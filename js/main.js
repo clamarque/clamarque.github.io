@@ -37,7 +37,7 @@ function addRepos(repo) {
     var $link = $('<a>').attr('href', repo.svn_url).appendTo($container);
 
     $.ajax({
-        url: 'https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg',
+        url: 'https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.png',
         success: function (data, status, error) {
             $link.append('<p></p>');
             $link.append('<img src="https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg" />');
