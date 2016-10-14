@@ -13,7 +13,7 @@ $(function () {
         url: apiDomain + url + '?sort='+ typeSort +'&client_secret='+ token,
         dataType: 'json',
         success: function (data, status, error) {
-            console.log(apiDomain+username+url+typeSort+token);
+            console.log(apiDomain + url + '?sort='+ typeSort +'&client_secret='+ token);
             if (data.length > 0) {
                 for (var i = 0; i < 6; i++) {
                     var repo = data[i];
