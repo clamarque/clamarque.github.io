@@ -5,13 +5,15 @@ var url = '/users/' + username + '/repos';
 var typeSort = 'update';
 var token = '1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e';
 
+
+
 //function init repository 
 $(function () {
     $.ajax({
         url: apiDomain + url + '?sort='+ typeSort +'&client_secret='+ token,
         dataType: 'json',
         success: function (data, status, error) {
-            console.log(url);
+            console.log(apiDomain+username+url+typeSort+token);
             if (data.length > 0) {
                 for (var i = 0; i < 6; i++) {
                     var repo = data[i];
