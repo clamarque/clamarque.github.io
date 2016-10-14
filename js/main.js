@@ -5,8 +5,6 @@ var url = '/users/' + username + '/repos';
 var typeSort = 'updated';
 var token = '1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e';
 
-
-
 //function init repository 
 $(function () {
     $.ajax({
