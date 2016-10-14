@@ -1,12 +1,14 @@
 //Init var
 var apiDomain = 'https://api.github.com';
 var username = 'clamarque';
-var api = '/users/' + username + '/repos';  
+var url = '/users/' + username + '/repos';
+var typeSort = 'update';
+var token = '1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e';
 
 //function init repository 
 $(function () {
     $.ajax({
-        url: apiDomain + api + '?sort=updated&client_secret=1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e',
+        url: apiDomain + url + '?sort='+ typeSort +'&client_secret='+ token,
         dataType: 'json',
         success: function (data, status, error) {
             if (data.length > 0) {
@@ -44,7 +46,6 @@ function addRepos(repo) {
             $link.append('<h5>' + repo.language + '</h5>');
             $link.append('<p>' + repo.description + '</p>');
             
-
             $container.append($link);
         },
         error: function (data, status, error) {
