@@ -12,7 +12,6 @@ $(function () {
             if (data.length > 0) {
                 for (var i = 0; i < 6; i++) {
                     var repo = data[i];
-                    console.log(repo);
                     //add repository
                     addRepos(repo);
                 }
