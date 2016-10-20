@@ -1,18 +1,19 @@
 //Init var
 var apiDomain = 'https://api.github.com';
 var username = 'clamarque';
-var api = '/users/' + username + '/repos';  
+var url = '/users/' + username + '/repos';
+var typeSort = 'updated';
+var token = '1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e';
 
 //function init repository 
 $(function () {
     $.ajax({
-        url: apiDomain + api + '?sort=updated&client_secret=1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e',
+        url: apiDomain + url + '?sort='+ typeSort +'&client_secret='+ token,
         dataType: 'json',
         success: function (data, status, error) {
             if (data.length > 0) {
                 for (var i = 0; i < 6; i++) {
                     var repo = data[i];
-                    console.log(repo);
                     //add repository
                     addRepos(repo);
                 }
@@ -37,15 +38,14 @@ function addRepos(repo) {
     var $link = $('<a>').attr('href', repo.svn_url).appendTo($container);
 
     $.ajax({
-        url: 'https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg',
+        url: 'https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.png',
         success: function (data, status, error) {
             $link.append('<p></p>');
-            $link.append('<img src="https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.jpg" />');
+            $link.append('<img src="https://raw.githubusercontent.com/' + username + '/' + repo.name + '/gh-pages/img/logo.png" />');
             $link.append('<p><i class="fa fa-star" aria-hidden="true"></i>' + repo.stargazers_count + '</p>');
             $link.append('<h5>' + repo.language + '</h5>');
             $link.append('<p>' + repo.description + '</p>');
             
-
             $container.append($link);
         },
         error: function (data, status, error) {
