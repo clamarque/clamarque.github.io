@@ -1,130 +1,253 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>CLamarque</title>
-    <meta name="author" content="Lamarque Charles">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ED5A64">
+  <head>
+    <meta charset="utf-8" />
+    <title>Charles Lamarque</title>
+    <meta name="author" content="Lamarque Charles" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ED5A64" />
 
     <link rel="icon" type="image/png" href="img/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://use.fontawesome.com/20cebff76a.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
+  <body>
     <section id="section-home">
-        <div class="overlay">
-            <div class="home-wrap text-center">
-                <img src="img/C.png" alt="Logo" class="img-responsive img__logo">
-                <h1>FRONT-END DEVELOPPER</h1>
-                <hr class="section__line">
-                <p>Hi there, my name is Charles, 30 year old front-end developer based in Lille. Currently working at INEAT.</p>
-                <div class="social-icons">
-                    <a href="https://github.com/Clamarque" class="btn btn-round btn-clear btn-github"><i class="fa fa-github-alt fa-2x"></i></a>
-                    <a href="https://twitter.com/Cha_lamarque" class="btn btn-round btn-clear btn-twitter"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/" class="btn btn-round btn-clear btn-linkedin"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                </div>
-                <a href="#section-portfolio"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-            </div>
+      <div class="overlay">
+        <div class="home-wrap text-center">
+          <img src="img/C.png" alt="Logo" class="img-responsive img__logo" />
+          <h1>FULL STACK JAVASCRIPT DEVELOPER</h1>
+          <hr class="section__line" />
+          <p>
+            Hi there, I'm Charles, a <span id="age"></span>-year-old full-stack
+            JavaScript developer based in Lille. Passionate about web
+            technologies, I enjoy building modern, efficient, and scalable
+            applications.
+          </p>
+          <div class="social-icons">
+            <a
+              href="https://github.com/Clamarque"
+              class="btn btn-round btn-clear btn-github"
+              ><i class="fa fa-github-alt fa-2x"></i
+            ></a>
+            <a
+              href="https://twitter.com/Cha_lamarque"
+              class="btn btn-round btn-clear btn-twitter"
+              ><i class="fa fa-twitter fa-2x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/charleslamarque"
+              class="btn btn-round btn-clear btn-linkedin"
+              ><i class="fa fa-linkedin-square fa-2x"></i
+            ></a>
+          </div>
+          <a href="#section-portfolio"
+            ><i class="fa fa-chevron-down" aria-hidden="true"></i
+          ></a>
         </div>
+      </div>
     </section>
     <section id="section-about" class="section">
-        <div class="container">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <h2>About me</h2>
-            <hr class="section__line">
-            <p>I'm a 30 years old and I work at INEAT. Developer and integrator,
-                I am self-taught, curious and above all passionate about the web and its technologies since 4 years. I make
-                sure to be up to date in <strong>web technology</strong> to get the best result.</p>
-            <p>Don't hesitate to check out my work below</p>
+      <div class="container">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <h2>About me</h2>
+        <hr class="section__line" />
+        <p>
+          I'm a <span id="age"></span>-year-old full-stack JavaScript developer
+          with a passion for web technologies. Self-taught and always curious, I
+          stay up to date with the latest trends to create high-quality, modern
+          applications.
+        </p>
+
+        <p>
+          I work with <strong>the following technologies</strong> on a daily
+          basis
+        </p>
+
+        <div class="carousel-container hidden">
+          <div class="carousel" id="carousel">
+            <!-- Les badges seront injectés ici -->
+          </div>
         </div>
+
+        <p>Don't hesitate to check out my work below</p>
+      </div>
     </section>
     <section class="section-intro">
-        <div class="container">
-            <h3>Below a few of my favorite projects and recently updated. To see more of my work check out my github as i post quite often</h3>
-            <hr class="section__line">
-        </div>
+      <div class="container">
+        <h3>
+          Below are some of my favorite projects, including recent updates. Each
+          one reflects my experience as a full-stack JavaScript developer over
+          the past nine years, covering everything from frontend interfaces to
+          backend architectures. Feel free to explore my work, and for more,
+          check out my GitHub!
+        </h3>
+        <hr class="section__line" />
+      </div>
     </section>
     <section id="section-portfolio" class="section">
-        <div class="container">
-            <i class="fa fa-briefcase" aria-hidden="true"></i>
-            <h2>Work</h2>
-            <hr class="section__line">
-            <div id="section-portfolio__items">
-                <ul>
-                    <li class="filter current-filter" data-filter="*">All</li>
-                    <li class="filter" data-filter=".HTML">Showcase</li>
-                    <li class="filter" data-filter=".TypeScript">Application</li>
-                </ul>
-            </div>
-            <div id="repos"></div>
-            <div class="row">
-                <a href="https://github.com/Clamarque">See all my open-source projects</a>
-            </div>
+      <div class="container">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <h2>Work</h2>
+        <hr class="section__line" />
+
+        <div class="section-portfolio__buttons">
+          <button onclick="filterReposV1('all', this)" class="current-active">
+            All
+          </button>
+          <button onclick="filterReposV1('showcase', this)">Showcase</button>
+          <button onclick="filterReposV1('application', this)">
+            Application
+          </button>
         </div>
-    </section>
-        <section class="section-intro">
-        <div class="container">
-            <h3>Follow me on Twitter. I regularly post about new technology</h3>
-            <hr class="section__line">
+
+        <div class="section-portfolio__repo-container">
+          <ul class="section-portfolio__repo-list" id="repo-list">
+            <li data-type="application" class="visible-repos">
+              <a href="#" target="_blank">
+                <h4 class="repo-title">Be My Mates</h4>
+
+                <p>
+                  A mobile application for sports meetings. The application is
+                  still under development
+                </p>
+
+                <span class="repo-language"
+                  >#TypeScript #HTML #SCSS #JavaScript #React #NextJs #Nest
+                  #PWA</span
+                >
+              </a>
+            </li>
+
+            <li data-type="application" class="visible-repos">
+              <a href="https://www.cinetracker.fr/" target="_blank">
+                <h4 class="repo-title">CineTracker (Hubmovies)</h4>
+
+                <p>A mobile-first application for managing films and series</p>
+
+                <span class="repo-language"
+                  >#TypeScript #HTML #SCSS #JavaScript #Vue #Nuxt #Firebase
+                  #PWA</span
+                >
+              </a>
+            </li>
+
+            <li data-type="showcase" class="visible-repos">
+              <a href="https://www.chateaudescimes.fr/" target="_blank">
+                <h4 class="repo-title">Château des Cîmes</h4>
+
+                <p>
+                  A website for an implantology and dental aesthetics clinic in
+                  the north of France
+                </p>
+
+                <span class="repo-language"
+                  >#TypeScript #HTML #SCSS #JavaScript #Vue #Nuxt #Vuetify
+                  #MongoDB #Strapi #Apollo #GraphQl #PWA</span
+                >
+              </a>
+            </li>
+          </ul>
         </div>
-    </section>
-    <section id="section-twitter" class="section">
-        <div class="container">
-            <h2>Last Tweets</h2>
-            <hr class="section__line">
-            <a class="twitter-timeline" data-lang="en" data-height="500" data-width="400" data-link-color="#19CF86" href="https://twitter.com/Cha_lamarque">Tweets by Cha_lamarque</a>
+
+        <div class="row">
+          <a href="https://github.com/Clamarque"
+            >See all my open-source projects</a
+          >
         </div>
+      </div>
     </section>
     <section class="section-intro">
-        <div class="container">
-            <h3>Depending in the time of year and project, I may be available. If you've got an interesting one, feel free
-                    to email me below</h3>
-            <hr class="section__line">
-        </div>
+      <div class="container">
+        <h3>
+          Follow me on X (twitter), where I regularly share and repost updates
+          about the latest in technology.
+        </h3>
+        <hr class="section__line" />
+      </div>
+    </section>
+    <section id="section-twitter" class="section">
+      <div class="container">
+        <h2>Last Tweets</h2>
+        <hr class="section__line" />
+        <a
+          class="twitter-timeline"
+          data-height="500"
+          data-width="400"
+          data-link-color="#19CF86"
+          data-tweet-limit="5"
+          href="https://twitter.com/Cha_lamarque"
+          >Tweets by Cha_lamarque</a
+        >
+      </div>
+    </section>
+    <section class="section-intro">
+      <div class="container">
+        <h3>
+          Depending in the time of year and project, I may be available. If
+          you've got an interesting one, feel free to email me below
+        </h3>
+        <hr class="section__line" />
+      </div>
     </section>
     <section id="section-contact" class="section">
-        <div class="container">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <h2>contact</h2>
-            <hr class="section__line">
-            <a href="mailto:clamarque.dev@gmail.com?subject=Est%20intéréssé%20par%20votre%20profil">EMAIL ME</a>
-        </div>
+      <div class="container">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <h2>contact</h2>
+        <hr class="section__line" />
+        <a
+          href="mailto:clamarque.dev@gmail.com?subject=Est%20intéréssé%20par%20votre%20profil"
+          >EMAIL ME</a
+        >
+      </div>
     </section>
     <footer>
-        <div class="container">
-            <img src="img/C.png" alt="logo">
-            <a href="https://github.com/Clamarque" class="btn btn-round btn-clear btn-github" target="_blank">
-                <i class="fa fa-github-alt fa-2x"></i>
-            </a>
-            <a href="https://twitter.com/Cha_lamarque" class="btn btn-round btn-clear btn-twitter" target="_blank">
-                <i class="fa fa-twitter fa-2x"></i>
-            </a>
-            <a href="https://www.linkedin.com/" class="btn btn-round btn-clear btn-linkedin" target="_blank">
-                <i class="fa fa-linkedin-square fa-2x"></i>
-            </a>
-        </div>
+      <div class="container">
+        <img src="img/C.png" alt="logo" />
+        <a
+          href="https://github.com/Clamarque"
+          class="btn btn-round btn-clear btn-github"
+          target="_blank"
+        >
+          <i class="fa fa-github-alt fa-2x"></i>
+        </a>
+        <a
+          href="https://twitter.com/Cha_lamarque"
+          class="btn btn-round btn-clear btn-twitter"
+          target="_blank"
+        >
+          <i class="fa fa-twitter fa-2x"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/charleslamarque"
+          class="btn btn-round btn-clear btn-linkedin"
+          target="_blank"
+        >
+          <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+      </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/main.js"></script>
-    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script
+      async
+      src="http://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
     <script src="js/analytics.js"></script>
-</body>
+  </body>
 </html>

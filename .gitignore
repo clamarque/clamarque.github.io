@@ -7,3 +7,5 @@ node_modules/
 scss/*.scss
 #ignore package
 package.json
+
+.env
