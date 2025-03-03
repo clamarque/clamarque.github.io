@@ -90,14 +90,10 @@ async function showCarouselWhenImagesLoaded() {
 
 async function fetchStarredRepos() {
   const username = "clamarque"
-  const url = `https://api.github.com/users/${username}/repos`
+  const url = `https://api.github.com/users/${username}/repos?client_secret=${tokenV1}`
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `token ${tokenV1}`,
-      },
-    })
+    const response = await fetch(url)
     const repos = await response.json()
 
     // Filtrer les repos avec au moins 1 étoile
@@ -110,11 +106,7 @@ async function fetchStarredRepos() {
 
 async function getLanguages(url) {
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `token ${tokenV1}`,
-      },
-    })
+    const response = await fetch(url)
     const languages = await response.json()
 
     const languageNames = Object.keys(languages)
