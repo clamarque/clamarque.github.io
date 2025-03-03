@@ -6,10 +6,17 @@ body {
   background: url("../img/background.jpg") no-repeat center top fixed;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
@@ -19,6 +26,7 @@ html {
 .container {
   position: relative;
   z-index: 5;
+  margin: 0 auto;
   padding: 50px 0;
   text-align: center;
 }
@@ -26,6 +34,7 @@ html {
 a {
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 a:hover {
@@ -76,14 +85,9 @@ p {
   width: 160px;
 }
 
-.row {
-  margin: 0;
-  /*padding: 0 15px;*/
-}
-
 .section__line {
   width: 90px;
-  border-top: 3px solid #525856;
+  border: 2px solid #525856;
   margin-bottom: 30px;
 }
 
@@ -114,7 +118,7 @@ p {
 .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 /*
@@ -175,15 +179,23 @@ p {
 }
 
 #section-home .section__line {
-  border-top: 3px solid #fff;
+  border: 3px solid #fff;
 }
 
 #section-home .home-wrap {
   padding: 100px 0;
+  text-align: center;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 #section-home p {
   margin-bottom: 20px;
+  padding: 16px;
   color: #fff;
   font-size: 17px;
 }
@@ -205,7 +217,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 10px;
   height: 40px; /* Deux fois la hauteur d'un badge pour être sûr */
 }
@@ -254,17 +266,17 @@ p {
 }
 
 /* Button see all */
-#section-portfolio .row > a {
+#section-portfolio .btn-repos {
   display: block;
   margin: 50px auto 0;
   padding: 12px 24px;
   width: 300px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #1abc9c;
   background: #1abc9c;
 }
 
-#section-portfolio .row > a:hover {
+#section-portfolio .btn-repos:hover {
   background: #fff;
   border: 1px solid #1abc9c;
   color: #1abc9c;
@@ -280,7 +292,7 @@ p {
   background-color: #2c3e50;
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: background 0.3s ease;
 }
 .section-portfolio__buttons button:hover {
@@ -308,12 +320,13 @@ p {
   gap: 10px;
   justify-content: center;
   width: 100%;
+  padding: 0;
 }
 
 .section-portfolio__repo-list li {
   border: 1px solid #f0f0f0;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -322,7 +335,6 @@ p {
   height: 350px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease, opacity 0.5s ease;
-  perspective: 1000px; /* Ajoutez la perspective pour l'effet de retournement */
 }
 
 .section-portfolio__repo-list li:hover {
@@ -392,7 +404,7 @@ p {
   width: 200px;
   background: #1abc9c;
   border: 1px solid #1abc9c;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 #section-contact a:hover {
@@ -420,6 +432,7 @@ footer i {
 
 footer img {
   width: 100px;
+  vertical-align: middle;
 }
 
 /*
@@ -434,25 +447,19 @@ footer img {
     font-size: 35px;
     line-height: 35px;
   }
-  #section-portfolio__items ul {
-    padding: 0;
-  }
-  #section-portfolio__items ul li {
-    display: block;
-    margin: 15px 0;
-  }
 }
 
 @media screen and (min-width: 768px) {
   body {
     background-size: cover;
   }
+
+  .container {
+    width: 750px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  #section-home .home-wrap {
-    /*padding: 0;*/
-  }
   .img-responsive {
     display: initial;
   }
@@ -462,6 +469,18 @@ footer img {
   h1 {
     font-size: 45px;
     line-height: 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }
 
@@ -477,14 +496,6 @@ footer img {
 .hidden {
   display: none;
 }
-
-/* .card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-} */
 
 .hidden-repos {
   opacity: 0 !important;

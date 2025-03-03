@@ -203,6 +203,13 @@ async function init() {
   await displayRepos(allRepos)
 }
 
+function getExpYears() {
+  const startYear = 2016
+  const currentYear = new Date().getFullYear()
+  const yearsExperience = currentYear - startYear
+  document.getElementById("years-experience").textContent = yearsExperience
+}
+
 document.addEventListener("DOMContentLoaded", async function () {
   const birthYear = 1991
   const currentYear = new Date().getFullYear()
@@ -211,6 +218,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   ageElements.forEach(function (element) {
     element.textContent = age
   })
+
+  getExpYears()
 
   await initCarousel()
   await showCarouselWhenImagesLoaded()
