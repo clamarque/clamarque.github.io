@@ -1,6 +1,6 @@
 //Init const
 let allRepos = []
-const tokenV1 = "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"
+const tokenV1 = "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"
 
 /**
  * fetch markdown from the readme file
