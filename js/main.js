@@ -1,6 +1,6 @@
 //Init const
 let allRepos = []
-const tokenV1 = process.env.GITHUB
+const tokenV1 = "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"
 
 /**
  * fetch markdown from the readme file
