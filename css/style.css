@@ -347,6 +347,8 @@ p {
 .section-portfolio__repo-list .repo-title {
   word-break: break-all;
   height: 60px;
+  margin: 0 0 10px;
+  padding: 0;
 }
 
 .section-portfolio__repo-list p {

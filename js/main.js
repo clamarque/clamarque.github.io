@@ -1,6 +1,6 @@
 //Init const
 let allRepos = []
-const tokenV1 = "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"
+const tokenV1 = "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"
 
 /**
  * fetch markdown from the readme file
@@ -133,7 +133,7 @@ async function createRepoItem(repo) {
 
   li.innerHTML = `
     <a href="${repo.html_url}" target="_blank">
-        <h4 class="repo-title">${repo.name}</h4>
+        <h3 class="repo-title">${repo.name}</h3>
 
         <span>${repo.stargazers_count} <i class="fa fa-star"></i></span>
 

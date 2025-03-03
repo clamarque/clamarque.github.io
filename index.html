@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Charles Lamarque</title>
@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ED5A64" />
+    <meta
+      name="description"
+      content="Charles Lamarque, a full-stack JavaScript developer based in Lille. Passionate about web technologies, I enjoy building modern, efficient, and scalable applications."
+    />
 
     <link rel="icon" type="image/png" href="img/favicon.ico" />
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
       rel="stylesheet"
+      rel="preconnect"
     />
     <script src="https://use.fontawesome.com/20cebff76a.js"></script>
 
@@ -20,6 +25,7 @@
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&display=swap"
       rel="stylesheet"
+      rel="preconnect"
       type="text/css"
     />
   </head>
@@ -28,7 +34,13 @@
     <section id="section-home">
       <div class="overlay">
         <div class="home-wrap text-center">
-          <img src="img/C.png" alt="Logo" class="img-responsive img__logo" />
+          <img
+            src="img/C.png"
+            alt="Logo"
+            class="img-responsive img__logo"
+            width="60"
+            height="60"
+          />
           <h1>FULL STACK JAVASCRIPT DEVELOPER</h1>
           <hr class="section__line" />
           <p>
@@ -41,20 +53,23 @@
             <a
               href="https://github.com/Clamarque"
               class="btn btn-round btn-clear btn-github"
+              aria-label="GitHub"
               ><i class="fa fa-github-alt fa-2x"></i
             ></a>
             <a
               href="https://twitter.com/Cha_lamarque"
               class="btn btn-round btn-clear btn-twitter"
+              aria-label="Twitter"
               ><i class="fa fa-twitter fa-2x"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/charleslamarque"
               class="btn btn-round btn-clear btn-linkedin"
+              aria-label="LinkedIn"
               ><i class="fa fa-linkedin-square fa-2x"></i
             ></a>
           </div>
-          <a href="#section-portfolio"
+          <a href="#section-portfolio" aria-label="scroll down"
             ><i class="fa fa-chevron-down" aria-hidden="true"></i
           ></a>
         </div>
@@ -118,7 +133,7 @@
           <ul class="section-portfolio__repo-list" id="repo-list">
             <li data-type="application" class="visible-repos">
               <a href="#" target="_blank">
-                <h4 class="repo-title">Be My Mates</h4>
+                <h3 class="repo-title">Be My Mates</h3>
 
                 <p>
                   A mobile application for sports meetings. The application is
@@ -134,7 +149,7 @@
 
             <li data-type="application" class="visible-repos">
               <a href="https://www.cinetracker.fr/" target="_blank">
-                <h4 class="repo-title">CineTracker (Hubmovies)</h4>
+                <h3 class="repo-title">CineTracker (Hubmovies)</h3>
 
                 <p>A mobile-first application for managing films and series</p>
 
@@ -147,7 +162,7 @@
 
             <li data-type="showcase" class="visible-repos">
               <a href="https://www.chateaudescimes.fr/" target="_blank">
-                <h4 class="repo-title">Château des Cîmes</h4>
+                <h3 class="repo-title">Château des Cîmes</h3>
 
                 <p>
                   A website for an implantology and dental aesthetics clinic in
@@ -216,11 +231,12 @@
     </section>
     <footer>
       <div class="container">
-        <img src="img/C.png" alt="logo" />
+        <img src="img/C.png" alt="logo" width="100" height="100" />
         <a
           href="https://github.com/Clamarque"
           class="btn btn-round btn-clear btn-github"
           target="_blank"
+          aria-label="GitHub"
         >
           <i class="fa fa-github-alt fa-2x"></i>
         </a>
@@ -228,6 +244,7 @@
           href="https://twitter.com/Cha_lamarque"
           class="btn btn-round btn-clear btn-twitter"
           target="_blank"
+          aria-label="Twitter"
         >
           <i class="fa fa-twitter fa-2x"></i>
         </a>
@@ -235,6 +252,7 @@
           href="https://www.linkedin.com/in/charleslamarque"
           class="btn btn-round btn-clear btn-linkedin"
           target="_blank"
+          aria-label="LinkedIn"
         >
           <i class="fa fa-linkedin-square fa-2x"></i>
         </a>
