@@ -303,7 +303,7 @@ button:focus-visible {
   transition: all var(--dur-fast) var(--ease-out);
 }
 
-.nav__links a:hover {
+.nav__links a:not(.nav__cta):hover {
   color: var(--text-0);
   background: var(--surface);
 }
