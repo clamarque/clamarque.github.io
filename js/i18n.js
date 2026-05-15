@@ -49,20 +49,30 @@ const I18N = {
     "repo.hubmovies":
       "A mobile-first application for managing films and series.",
 
-    "exp.1.date": "2024 — Now",
-    "exp.1.role": "Full-Stack Developer",
+    "exp.1.date": "Jun 2025 — Now",
+    "exp.1.company": "Infogène · ESN · Lille",
+    "exp.1.role": "Full-Stack Developer — consulting",
     "exp.1.desc":
-      "Building and maintaining web applications across the stack. Focus on TypeScript, React/Next.js front-ends and Node.js APIs.",
-    "exp.2.company": "Freelance & Product Work",
-    "exp.2.role": "Full-Stack JavaScript Developer",
+      "Current client mission through Infogène. Building and maintaining production web applications across the stack. Alongside client work, I build personal products (<em>Badminton Manager</em>, <em>Hubmovies</em>).",
+    "exp.2.date": "2024 — 2025",
+    "exp.2.company": "Sully Group · ESN",
+    "exp.2.role": "Full-Stack Developer — consulting",
     "exp.2.desc":
-      "Shipped personal and client products — including <em>Hubmovies</em> and <em>Badminton Manager</em>. End-to-end ownership: design, frontend, API and hosting.",
-    "exp.3.company": "Early career · Lille",
-    "exp.3.role": "Software Developer",
+      "Client delivery as a consultant: full-stack web development, shipping and maintaining features in production teams.",
+    "exp.3.date": "2017 — 2024",
+    "exp.3.company": "Ineat · ESN · Lille",
+    "exp.3.role": "Full-Stack Developer — consulting (~7 yrs)",
     "exp.3.desc":
-      "First professional roles after engineering school. Worked on business web apps in Java/J2EE and gradually moved towards modern JavaScript ecosystems.",
-    "exp.4.role": "Engineering degree, Computer Science",
+      "Seven years of consulting across multiple client missions — banking & finance, retail/e-commerce, public sector and industry. Started front-end, then grew into full-stack ownership: frontend, API and hosting.",
+    "exp.4.date": "2016 — 2017",
+    "exp.4.company": "Sogeti (Capgemini) · ESN",
+    "exp.4.role": "Front-End Developer — consulting",
     "exp.4.desc":
+      "First role out of engineering school, in consulting. Front-end web development on client projects.",
+    "exp.5.date": "2013 — 2016",
+    "exp.5.company": "EPSI · Lille",
+    "exp.5.role": "Engineering degree, Computer Science",
+    "exp.5.desc":
       "Systems & networks, application development, databases and project management. Foundations that still guide how I build today.",
 
     "footer.copy": "Charles Lamarque · Built in Lille",
@@ -172,20 +182,30 @@ const I18N = {
     "repo.hubmovies":
       "Une application mobile-first pour gérer films et séries.",
 
-    "exp.1.date": "2024 — Aujourd'hui",
-    "exp.1.role": "Développeur Full-Stack",
+    "exp.1.date": "Juin 2025 — Auj.",
+    "exp.1.company": "Infogène · ESN · Lille",
+    "exp.1.role": "Développeur Full-Stack — conseil",
     "exp.1.desc":
-      "Développement et maintenance d'applications web sur toute la stack. Focus TypeScript, front-ends React/Next.js et APIs Node.js.",
-    "exp.2.company": "Freelance & projets produit",
-    "exp.2.role": "Développeur Full-Stack JavaScript",
+      "Mission client en cours via Infogène. Développement et maintenance d'applications web en production, sur toute la stack. En parallèle du conseil, je développe des produits perso (<em>Badminton Manager</em>, <em>Hubmovies</em>).",
+    "exp.2.date": "2024 — 2025",
+    "exp.2.company": "Sully Group · ESN",
+    "exp.2.role": "Développeur Full-Stack — conseil",
     "exp.2.desc":
-      "Livraison de produits perso et clients — dont <em>Hubmovies</em> et <em>Badminton Manager</em>. Maîtrise de bout en bout : design, frontend, API et hébergement.",
-    "exp.3.company": "Début de carrière · Lille",
-    "exp.3.role": "Développeur logiciel",
+      "Prestation client en tant que consultant : développement web full-stack, livraison et maintenance de features en équipe produit.",
+    "exp.3.date": "2017 — 2024",
+    "exp.3.company": "Ineat · ESN · Lille",
+    "exp.3.role": "Développeur Full-Stack — conseil (~7 ans)",
     "exp.3.desc":
-      "Premiers postes après l'école d'ingénieurs. Applications web métier en Java/J2EE, puis transition progressive vers les écosystèmes JavaScript modernes.",
-    "exp.4.role": "Diplôme d'ingénieur, Informatique",
+      "Sept ans de conseil sur de multiples missions clients — banque & finance, retail/e-commerce, secteur public et industrie. Démarrage en front, puis montée en full-stack : frontend, API, hébergement.",
+    "exp.4.date": "2016 — 2017",
+    "exp.4.company": "Sogeti (Capgemini) · ESN",
+    "exp.4.role": "Développeur Front-End — conseil",
     "exp.4.desc":
+      "Premier poste à la sortie de l'école d'ingénieurs, en conseil. Développement web front-end sur projets clients.",
+    "exp.5.date": "2013 — 2016",
+    "exp.5.company": "EPSI · Lille",
+    "exp.5.role": "Diplôme d'ingénieur, Informatique",
+    "exp.5.desc":
       "Systèmes & réseaux, développement applicatif, bases de données et gestion de projet. Des fondations qui guident encore ma façon de construire aujourd'hui.",
 
     "footer.copy": "Charles Lamarque · Conçu à Lille",
