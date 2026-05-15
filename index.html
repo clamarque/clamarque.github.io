@@ -2,29 +2,114 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Charles Lamarque</title>
-    <meta name="author" content="Lamarque Charles" />
+    <title>Charles Lamarque — Full-Stack JavaScript Developer</title>
+    <meta name="author" content="Charles Lamarque" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ED5A64" />
+    <meta name="theme-color" content="#07070b" />
+    <meta name="color-scheme" content="dark" />
     <meta
       name="description"
-      content="Charles Lamarque, a full-stack JavaScript developer based in Lille. Passionate about web technologies, I enjoy building modern, efficient, and scalable applications."
+      content="Charles Lamarque — Full-stack JavaScript developer based in Lille. Available for freelance: I build web products that are fast, reliable and beautiful."
+    />
+    <meta name="keywords" content="freelance, full-stack, JavaScript, TypeScript, React, Next.js, Node.js, Lille, France, web developer" />
+    <link rel="canonical" href="https://clamarque.github.io/" />
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Charles Lamarque" />
+    <meta property="og:url" content="https://clamarque.github.io/" />
+    <meta property="og:title" content="Charles Lamarque — Full-Stack JavaScript Developer" />
+    <meta
+      property="og:description"
+      content="Freelance full-stack JavaScript developer in Lille. I build web products that are fast, reliable & beautiful."
+    />
+    <meta property="og:image" content="https://clamarque.github.io/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Charles Lamarque — Full-stack JS developer, Lille, FR" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Charles Lamarque — Full-Stack JavaScript Developer" />
+    <meta
+      name="twitter:description"
+      content="Freelance full-stack JavaScript developer in Lille. I build web products that are fast, reliable & beautiful."
+    />
+    <meta name="twitter:image" content="https://clamarque.github.io/img/og-image.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/C.png" />
+    <link rel="mask-icon" href="img/C.png" color="#00FFA3" />
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Charles Lamarque",
+      "url": "https://clamarque.github.io/",
+      "image": "https://clamarque.github.io/img/og-image.png",
+      "jobTitle": "Full-Stack JavaScript Developer",
+      "description": "Freelance full-stack JavaScript developer based in Lille, France.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lille",
+        "addressCountry": "FR"
+      },
+      "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "NestJS", "Vue", "Nuxt"],
+      "sameAs": [
+        "https://github.com/Clamarque",
+        "https://www.linkedin.com/in/charleslamarque"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "EPSI Lille"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
     />
 
-    <link rel="icon" type="image/png" href="img/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&display=swap"
-      rel="stylesheet"
-      rel="preconnect"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="css/style.css?v=2026.13" />
 
     <script src="https://use.fontawesome.com/20cebff76a.js"></script>
   </head>
 
   <body>
+    <!-- Floating glass nav -->
+    <nav class="nav" aria-label="Primary">
+      <a href="#section-home" class="nav__brand" aria-label="Home">
+        <img src="img/C.png" alt="" width="28" height="28" />
+        <span>Charles Lamarque</span>
+      </a>
+      <div class="nav__links">
+        <a href="#section-services" data-i18n="nav.services">Services</a>
+        <a href="#section-portfolio" data-i18n="nav.work">Work</a>
+        <a href="#section-experience" data-i18n="nav.experience">Experience</a>
+        <button
+          type="button"
+          class="lang-toggle"
+          id="lang-toggle"
+          aria-label="Switch language"
+          title="FR / EN"
+        >
+          <span class="lang-toggle__current">EN</span>
+        </button>
+        <a href="mailto:clamarque.dev@gmail.com" class="nav__cta" data-i18n="nav.cta">
+          Hire me
+        </a>
+      </div>
+    </nav>
+
     <section id="section-home">
       <div class="overlay">
         <div class="home-wrap text-center">
@@ -35,14 +120,39 @@
             width="60"
             height="60"
           />
-          <h1>FULL STACK JAVASCRIPT DEVELOPER</h1>
+
+          <div class="home-meta">
+            <span class="home-meta__dot"></span>
+            <span data-i18n="hero.meta">Available for freelance · Lille, FR</span>
+          </div>
+
+          <h1>
+            <span data-i18n="hero.title.lead">I build web products that are</span>
+            <span class="accent" data-i18n="hero.title.accent">fast, reliable</span>
+            <span data-i18n="hero.title.tail">&amp; beautiful.</span>
+          </h1>
+
           <hr class="section__line" />
-          <p>
-            Hi there, I'm Charles, a <span id="age"></span>-year-old full-stack
-            JavaScript developer based in Lille. Passionate about web
-            technologies, I enjoy building modern, efficient, and scalable
-            applications.
+          <p data-i18n-html="hero.body">
+            I'm Charles — full-stack JavaScript developer based in Lille.
+            I help teams and founders ship modern web apps from
+            <strong>idea to production</strong>: clean UIs, solid APIs,
+            no bloat.
           </p>
+
+          <div class="hero-cta">
+            <a href="#section-portfolio" class="btn-primary" data-i18n="hero.cta.work">
+              View my work
+            </a>
+            <a
+              href="mailto:clamarque.dev@gmail.com?subject=Freelance%20project"
+              class="btn-secondary"
+              data-i18n="hero.cta.talk"
+            >
+              Let's talk →
+            </a>
+          </div>
+
           <div class="social-icons">
             <a
               href="https://github.com/Clamarque"
@@ -51,39 +161,79 @@
               ><i class="fa fa-github-alt fa-2x"></i
             ></a>
             <a
-              href="https://twitter.com/Cha_lamarque"
-              class="btn btn-round btn-clear btn-twitter"
-              aria-label="Twitter"
-              ><i class="fa fa-twitter fa-2x"></i
-            ></a>
-            <a
               href="https://www.linkedin.com/in/charleslamarque"
               class="btn btn-round btn-clear btn-linkedin"
               aria-label="LinkedIn"
               ><i class="fa fa-linkedin-square fa-2x"></i
             ></a>
           </div>
-          <a href="#section-portfolio" aria-label="scroll down"
-            ><i class="fa fa-chevron-down" aria-hidden="true"></i
-          ></a>
+
+          <a
+            href="#section-portfolio"
+            class="scroll-cue"
+            aria-label="Scroll to work"
+          >
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </section>
-    <section id="section-about" class="section">
+
+    <!-- Stats strip -->
+    <section id="section-stats" class="section reveal">
       <div class="container">
-        <i class="fa fa-user" aria-hidden="true"></i>
-        <h2>About me</h2>
+        <ul class="stats">
+          <li class="stats__item">
+            <span class="stats__num"><span id="stats-years">9</span>+</span>
+            <span class="stats__label" data-i18n="stats.years">Years of experience</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__num">20+</span>
+            <span class="stats__label" data-i18n="stats.projects">Projects shipped</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__num" id="stats-repos">—</span>
+            <span class="stats__label" data-i18n="stats.repos">Public repositories</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__num">∞</span>
+            <span class="stats__label" data-i18n="stats.coffees">Coffees per day</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Positioning statement -->
+    <section id="section-positioning" class="section reveal">
+      <div class="container">
+        <p class="positioning__kicker" data-i18n="positioning.kicker">— Positioning</p>
+        <h2 class="positioning__title">
+          <span data-i18n="positioning.title.lead">Builder,</span>
+          <span class="accent" data-i18n="positioning.title.accent">not just coder.</span>
+        </h2>
+        <p class="positioning__body" data-i18n="positioning.body">
+          I don't just write code. I think product. I care about the user,
+          the business outcome, the long-term maintainability. The result:
+          web apps that ship faster, scale cleaner, and feel right to use.
+        </p>
+      </div>
+    </section>
+
+    <section id="section-about" class="section reveal">
+      <div class="container">
+        <span class="eyebrow" data-i18n="about.eyebrow">About</span>
+        <h2 data-i18n="about.title">Engineering. Curiosity. Craft.</h2>
         <hr class="section__line" />
-        <p>
+        <p data-i18n-html="about.body1">
           I'm a <span id="age"></span>-year-old full-stack JavaScript developer
           with a strong passion for web technologies. After graduating from an
           engineering school in computer science in 2016, based in Lille (North
-          of France), I have continued to sharpen my skills as a self-taught
-          developer, staying curious and up to date with the latest trends to
+          of France), I've continued to sharpen my skills as a self-taught
+          developer — staying curious and up to date with the latest trends to
           build high-quality, modern applications.
         </p>
 
-        <p>
+        <p data-i18n-html="about.body2">
           I work with <strong>the following technologies</strong> on a daily
           basis
         </p>
@@ -94,60 +244,215 @@
           </div>
         </div>
 
-        <p>Don't hesitate to check out my work below</p>
+        <!-- GitHub live stats card (native, no 3rd party) -->
+        <div class="gh-stats" aria-label="GitHub statistics">
+          <div class="gh-card">
+            <header class="gh-card__head">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span data-i18n="gh.activity">GitHub activity</span>
+              <a
+                href="https://github.com/Clamarque"
+                target="_blank"
+                rel="noopener"
+                class="gh-card__link"
+                >@Clamarque ↗</a
+              >
+            </header>
+            <ul class="gh-card__stats">
+              <li>
+                <span class="gh-card__num" id="gh-repos">—</span>
+                <span class="gh-card__label" data-i18n="gh.repos">Repositories</span>
+              </li>
+              <li>
+                <span class="gh-card__num" id="gh-stars">—</span>
+                <span class="gh-card__label" data-i18n="gh.stars">Total stars</span>
+              </li>
+              <li>
+                <span class="gh-card__num" id="gh-followers">—</span>
+                <span class="gh-card__label" data-i18n="gh.followers">Followers</span>
+              </li>
+            </ul>
+          </div>
+          <div class="gh-card">
+            <header class="gh-card__head">
+              <i class="fa fa-code" aria-hidden="true"></i>
+              <span data-i18n="gh.langs">Top languages</span>
+            </header>
+            <ul class="gh-langs" id="gh-langs">
+              <li class="gh-langs__loading" data-i18n="gh.loading">Loading…</li>
+            </ul>
+          </div>
+        </div>
+
+        <p data-i18n="about.body3">Don't hesitate to check out my work below.</p>
       </div>
     </section>
-    <section class="section-intro">
+
+    <!-- Currently / Now -->
+    <section id="section-now" class="section reveal">
       <div class="container">
-        <h3>
-          Below are some of my favorite projects, including recent updates. Each
-          one reflects my experience as a full-stack JavaScript developer over
-          the past <span id="years-experience"></span> years, covering
-          everything from frontend interfaces to backend architectures. Feel
-          free to explore my work, and for more, check out my GitHub!
+        <span class="eyebrow" data-i18n="now.eyebrow">Now</span>
+        <h2 data-i18n="now.title">What I'm up to</h2>
+        <hr class="section__line" />
+        <div class="now-grid">
+          <article class="now-card">
+            <span class="now-card__icon"><i class="fa fa-code" aria-hidden="true"></i></span>
+            <h3 data-i18n="now.building.title">Building</h3>
+            <p data-i18n-html="now.building.body">
+              Shipping <strong>Badminton Manager</strong> — a web app to
+              organize badminton sessions, players and matches, built with
+              Next.js and TypeScript.
+            </p>
+          </article>
+          <article class="now-card">
+            <span class="now-card__icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+            <h3 data-i18n="now.learning.title">Learning</h3>
+            <p data-i18n="now.learning.body">
+              Deepening React Server Components, edge runtimes and AI-assisted
+              developer workflows.
+            </p>
+          </article>
+          <article class="now-card">
+            <span class="now-card__icon"><i class="fa fa-coffee" aria-hidden="true"></i></span>
+            <h3 data-i18n="now.exploring.title">Exploring</h3>
+            <p data-i18n="now.exploring.body">
+              Design systems, motion design, and accessible UI patterns —
+              raising the bar on perceived quality.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="section-services" class="section reveal">
+      <div class="container">
+        <span class="eyebrow" data-i18n="services.eyebrow">Services</span>
+        <h2 data-i18n="services.title">How I can help</h2>
+        <p class="services__lead" data-i18n="services.lead">
+          Three ways we can work together. Every mission starts with a free
+          discovery call to scope the right format.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__icon">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </span>
+              <h3 data-i18n="services.mvp.title">MVP &amp; product build</h3>
+            </div>
+            <p data-i18n="services.mvp.desc">
+              Take an idea from zero to a polished, shippable v1. Modern stack,
+              clean architecture, real users in weeks — not months.
+            </p>
+            <ul class="service-card__list">
+              <li data-i18n="services.mvp.b1">Architecture &amp; tech choices</li>
+              <li data-i18n="services.mvp.b2">Frontend, API &amp; database</li>
+              <li data-i18n="services.mvp.b3">Hosting &amp; CI/CD</li>
+            </ul>
+            <div class="service-card__price">
+              <span class="service-card__price-label" data-i18n="services.from">Starting at</span>
+              <span class="service-card__price-value">€XXX<span data-i18n="services.unit.project"> / project</span></span>
+            </div>
+          </article>
+
+          <article class="service-card service-card--feature">
+            <div class="service-card__head">
+              <span class="service-card__icon">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </span>
+              <h3 data-i18n="services.dev.title">Ongoing development</h3>
+              <span class="service-card__badge" data-i18n="services.popular">Most asked</span>
+            </div>
+            <p data-i18n="services.dev.desc">
+              Embedded as a senior full-stack developer in your team. Ship
+              features, raise quality, mentor juniors when needed.
+            </p>
+            <ul class="service-card__list">
+              <li data-i18n="services.dev.b1">Feature delivery &amp; reviews</li>
+              <li data-i18n="services.dev.b2">Frontend &amp; backend coverage</li>
+              <li data-i18n="services.dev.b3">Async-friendly, remote-first</li>
+            </ul>
+            <div class="service-card__price">
+              <span class="service-card__price-label" data-i18n="services.from">Starting at</span>
+              <span class="service-card__price-value">€XXX<span data-i18n="services.unit.day"> / day</span></span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__icon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <h3 data-i18n="services.audit.title">Audit &amp; refactor</h3>
+            </div>
+            <p data-i18n="services.audit.desc">
+              Code review, performance &amp; UX audit on an existing app, with
+              a prioritized action plan. Optional implementation follow-up.
+            </p>
+            <ul class="service-card__list">
+              <li data-i18n="services.audit.b1">Architecture &amp; code review</li>
+              <li data-i18n="services.audit.b2">Performance &amp; SEO checks</li>
+              <li data-i18n="services.audit.b3">Written report &amp; roadmap</li>
+            </ul>
+            <div class="service-card__price">
+              <span class="service-card__price-label" data-i18n="services.from">Starting at</span>
+              <span class="service-card__price-value">€XXX<span data-i18n="services.unit.audit"> / audit</span></span>
+            </div>
+          </article>
+        </div>
+
+        <p class="services__note">
+          <strong data-i18n="services.todo.label">[Edit me]</strong>
+          <span data-i18n="services.todo.text">
+            replace €XXX with your real starting rates before publishing.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-intro reveal">
+      <div class="container">
+        <h3 data-i18n-html="work.intro">
+          A selection of favorite projects — recently updated. Each one reflects
+          my experience as a full-stack JavaScript developer over the past
+          <span id="years-experience"></span> years, from frontend interfaces
+          to backend architectures.
         </h3>
         <hr class="section__line" />
       </div>
     </section>
-    <section id="section-portfolio" class="section">
-      <div class="container">
-        <i class="fa fa-briefcase" aria-hidden="true"></i>
-        <h2>Work</h2>
-        <hr class="section__line" />
 
-        <div class="section-portfolio__buttons">
-          <button onclick="filterReposV1('all', this)" class="current-active">
-            All
-          </button>
-          <button onclick="filterReposV1('showcase', this)">Showcase</button>
-          <button onclick="filterReposV1('application', this)">
-            Application
-          </button>
-        </div>
+    <section id="section-portfolio" class="section reveal">
+      <div class="container">
+        <span class="eyebrow" data-i18n="work.eyebrow">Work</span>
+        <h2 data-i18n="work.title">Things I've built</h2>
+        <hr class="section__line" />
 
         <div class="section-portfolio__repo-container">
           <ul class="section-portfolio__repo-list" id="repo-list">
-            <li data-type="application" class="visible-repos">
-              <a href="https://bemymates.app/fr" target="_blank">
-                <h3 class="repo-title">Be My Mates</h3>
+            <li class="visible-repos">
+              <a href="https://badminton-manager.vercel.app/" target="_blank" rel="noopener">
+                <h3 class="repo-title">Badminton Manager</h3>
 
-                <p>
-                  A mobile application for sports meetings. The application is
-                  still under development
+                <p data-i18n="repo.badminton">
+                  A web application to organize and manage badminton sessions,
+                  players and matches — built to streamline club and event
+                  coordination.
                 </p>
 
                 <span class="repo-language"
-                  >#TypeScript #HTML #SCSS #JavaScript #React #NextJs #Nest
-                  #PWA</span
+                  >#TypeScript #JavaScript #React #NextJs #Vercel #PWA</span
                 >
               </a>
             </li>
 
-            <li data-type="application" class="visible-repos">
-              <a href="https://www.hubmovies.app/" target="_blank">
+            <li class="visible-repos">
+              <a href="https://www.hubmovies.app/" target="_blank" rel="noopener">
                 <h3 class="repo-title">Hubmovies</h3>
 
-                <p>A mobile-first application for managing films and series</p>
+                <p data-i18n="repo.hubmovies">A mobile-first application for managing films and series.</p>
 
                 <span class="repo-language"
                   >#TypeScript #HTML #SCSS #JavaScript #Vue #Nuxt #Firebase
@@ -155,117 +460,165 @@
                 >
               </a>
             </li>
-
-            <li data-type="showcase" class="visible-repos">
-              <a href="https://www.chateaudescimes.fr/" target="_blank">
-                <h3 class="repo-title">Château des Cîmes</h3>
-
-                <p>
-                  A website for an implantology and dental aesthetics clinic in
-                  the north of France
-                </p>
-
-                <span class="repo-language"
-                  >#TypeScript #HTML #SCSS #JavaScript #Vue #Nuxt #Vuetify
-                  #MongoDB #Strapi #Apollo #GraphQl #PWA</span
-                >
-              </a>
-            </li>
           </ul>
         </div>
 
-        <a class="btn-repos" href="https://github.com/Clamarque"
+        <a class="btn-repos" href="https://github.com/Clamarque" target="_blank" rel="noopener" data-i18n="work.cta"
           >See all my open-source projects</a
         >
       </div>
     </section>
-    <section class="section-intro">
+
+    <!-- Experience timeline -->
+    <section id="section-experience" class="section reveal">
       <div class="container">
-        <h3>
-          Follow me on X (twitter), where I regularly share and repost updates
-          about the latest in technology.
-        </h3>
+        <span class="eyebrow" data-i18n="exp.eyebrow">Experience</span>
+        <h2 data-i18n="exp.title">Journey so far</h2>
         <hr class="section__line" />
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date" data-i18n="exp.1.date">2024 — Now</span>
+              <span class="timeline__company">Infogene · Lille, FR</span>
+            </div>
+            <div class="timeline__body">
+              <h3 data-i18n="exp.1.role">Full-Stack Developer</h3>
+              <p data-i18n="exp.1.desc">
+                Building and maintaining web applications across the stack.
+                Focus on TypeScript, React/Next.js front-ends and Node.js APIs.
+              </p>
+              <span class="timeline__tags">TypeScript · React · Next.js · Node.js</span>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date">2020 — 2024</span>
+              <span class="timeline__company" data-i18n="exp.2.company">Freelance &amp; Product Work</span>
+            </div>
+            <div class="timeline__body">
+              <h3 data-i18n="exp.2.role">Full-Stack JavaScript Developer</h3>
+              <p data-i18n-html="exp.2.desc">
+                Shipped personal and client products — including
+                <em>Hubmovies</em> and <em>Badminton Manager</em>. End-to-end
+                ownership: design, frontend, API and hosting.
+              </p>
+              <span class="timeline__tags">Vue · Nuxt · React · Next.js · Firebase · Vercel</span>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date">2016 — 2020</span>
+              <span class="timeline__company" data-i18n="exp.3.company">Early career · Lille</span>
+            </div>
+            <div class="timeline__body">
+              <h3 data-i18n="exp.3.role">Software Developer</h3>
+              <p data-i18n="exp.3.desc">
+                First professional roles after engineering school. Worked on
+                business web apps in Java/J2EE and gradually moved towards
+                modern JavaScript ecosystems.
+              </p>
+              <span class="timeline__tags">Java · J2EE · SQL · JavaScript</span>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__meta">
+              <span class="timeline__date">2013 — 2016</span>
+              <span class="timeline__company">EPSI · Lille</span>
+            </div>
+            <div class="timeline__body">
+              <h3 data-i18n="exp.4.role">Engineering degree, Computer Science</h3>
+              <p data-i18n="exp.4.desc">
+                Systems &amp; networks, application development, databases and
+                project management. Foundations that still guide how I build
+                today.
+              </p>
+              <span class="timeline__tags">Java · ASP.NET · MySQL · Agile</span>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
-    <section id="section-twitter" class="section">
-      <div class="container">
-        <h2>Last Tweets</h2>
+
+
+    <section id="section-contact" class="section reveal">
+      <div class="container contact-card">
+        <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+        <h2 class="contact-card__title">
+          <span data-i18n="contact.title.lead">Got a project in mind?</span>
+          <span class="accent" data-i18n="contact.title.accent">Let's talk.</span>
+        </h2>
+        <p class="contact-card__body" data-i18n="contact.body">
+          Freelance missions, product builds, technical audits — happy to
+          discuss anything web. Usually reply within 24h.
+        </p>
         <hr class="section__line" />
-        <a
-          class="twitter-timeline"
-          data-height="500"
-          data-width="400"
-          data-link-color="#19CF86"
-          data-tweet-limit="5"
-          href="https://twitter.com/Cha_lamarque"
-          >Tweets by Cha_lamarque</a
-        >
+        <div class="contact-card__actions">
+          <a
+            href="mailto:clamarque.dev@gmail.com?subject=Freelance%20project"
+            class="btn-primary"
+            >clamarque.dev@gmail.com</a
+          >
+          <a
+            href="https://www.linkedin.com/in/charleslamarque"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary"
+            >LinkedIn →</a
+          >
+        </div>
+        <p class="contact-card__meta" data-i18n="contact.meta">
+          Based in Lille, FR · Working remotely across Europe
+        </p>
       </div>
     </section>
-    <section class="section-intro">
-      <div class="container">
-        <h3>
-          Depending in the time of year and project, I may be available. If
-          you've got an interesting one, feel free to email me below
-        </h3>
-        <hr class="section__line" />
-      </div>
-    </section>
-    <section id="section-contact" class="section">
-      <div class="container">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <h2>contact</h2>
-        <hr class="section__line" />
-        <a
-          href="mailto:clamarque.dev@gmail.com?subject=Est%20intéréssé%20par%20votre%20profil"
-          >EMAIL ME</a
-        >
-      </div>
-    </section>
+
     <footer>
       <div class="container">
         <img src="img/C.png" alt="logo" width="100" height="100" />
-        <a
-          href="https://github.com/Clamarque"
-          class="btn btn-round btn-clear btn-github"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="fa fa-github-alt fa-2x"></i>
-        </a>
-        <a
-          href="https://twitter.com/Cha_lamarque"
-          class="btn btn-round btn-clear btn-twitter"
-          target="_blank"
-          aria-label="Twitter"
-        >
-          <i class="fa fa-twitter fa-2x"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/charleslamarque"
-          class="btn btn-round btn-clear btn-linkedin"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="fa fa-linkedin-square fa-2x"></i>
-        </a>
+        <div class="social-icons">
+          <a
+            href="https://github.com/Clamarque"
+            class="btn btn-round btn-clear btn-github"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="fa fa-github-alt fa-2x"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/charleslamarque"
+            class="btn btn-round btn-clear btn-linkedin"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fa fa-linkedin-square fa-2x"></i>
+          </a>
+        </div>
+        <p class="footer__copy">
+          © <span id="footer-year"></span>
+          <span data-i18n="footer.copy">Charles Lamarque · Built in Lille</span>
+        </p>
       </div>
     </footer>
 
-    <script>
-      window.env = {
-        GITHUB_TOKEN: "1c6ce1a76cf195b536c6e0af14e8d71e6e804f7e",
-      }
-    </script>
+    <button
+      type="button"
+      class="to-top"
+      id="to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
     <script src="js/analytics.js"></script>
   </body>
 </html>
