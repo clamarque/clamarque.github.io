@@ -61,7 +61,7 @@ const I18N = {
       "Client delivery as a consultant: full-stack web development, shipping and maintaining features in production teams.",
     "exp.3.date": "2017 — 2024",
     "exp.3.company": "Ineat · ESN · Lille",
-    "exp.3.role": "Full-Stack Developer — consulting (~7 yrs)",
+    "exp.3.role": "Full-Stack Developer — consulting",
     "exp.3.desc":
       "Seven years of consulting across multiple client missions — banking & finance, retail/e-commerce, public sector and industry. Started front-end, then grew into full-stack ownership: frontend, API and hosting.",
     "exp.4.date": "2016 — 2017",
@@ -194,7 +194,7 @@ const I18N = {
       "Prestation client en tant que consultant : développement web full-stack, livraison et maintenance de features en équipe produit.",
     "exp.3.date": "2017 — 2024",
     "exp.3.company": "Ineat · ESN · Lille",
-    "exp.3.role": "Développeur Full-Stack — conseil (~7 ans)",
+    "exp.3.role": "Développeur Full-Stack — conseil",
     "exp.3.desc":
       "Sept ans de conseil sur de multiples missions clients — banque & finance, retail/e-commerce, secteur public et industrie. Démarrage en front, puis montée en full-stack : frontend, API, hébergement.",
     "exp.4.date": "2016 — 2017",
@@ -320,7 +320,7 @@ function applyLang(lang) {
 
   try {
     localStorage.setItem(LANG_KEY, lang)
-  } catch {}
+  } catch { }
 }
 
 function initI18n() {
