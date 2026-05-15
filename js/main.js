@@ -148,7 +148,7 @@ function createRepoItem(repo) {
   li.innerHTML = `
     <a href="${repo.html_url}" target="_blank" rel="noopener">
         <h3 class="repo-title">${repo.name}</h3>
-        <span>${repo.stargazers_count} <i class="fa fa-star"></i></span>
+        <span>${repo.stargazers_count} <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
         <p>${safeDesc}</p>
         <span class="repo-language">${buildLanguageTags(repo)}</span>
     </a>

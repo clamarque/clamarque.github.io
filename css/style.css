@@ -181,6 +181,22 @@ button:focus-visible {
   border-radius: 4px;
 }
 
+/* Inline SVG icons (replaces FontAwesome) */
+.icon {
+  width: 1.15em;
+  height: 1.15em;
+  display: inline-block;
+  vertical-align: -0.18em;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.icon--lg {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
 /* ============================================================
    Layout primitives
    ============================================================ */
@@ -447,10 +463,11 @@ button:focus-visible {
   color: var(--text-1);
 }
 
-.btn-round i {
+.btn-round .icon {
   position: static;
   top: auto;
-  font-size: 18px;
+  width: 20px;
+  height: 20px;
   line-height: 1;
 }
 
@@ -547,7 +564,7 @@ button:focus-visible {
   transform: translateY(2px);
 }
 
-.scroll-cue i { animation: bounce 2.4s ease-in-out infinite; }
+.scroll-cue .icon { animation: bounce 2.4s ease-in-out infinite; }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -574,7 +591,6 @@ button:focus-visible {
   text-align: center;
 }
 
-#section-about i.fa-user { display: none; }
 
 #section-about h2 {
   text-transform: none;
@@ -677,7 +693,6 @@ button:focus-visible {
   text-align: center;
 }
 
-#section-portfolio > .container > i.fa-briefcase { display: none; }
 
 #section-portfolio h2 {
   text-transform: none;
@@ -764,7 +779,7 @@ button:focus-visible {
   text-transform: none;
 }
 
-.section-portfolio__repo-list li i { color: var(--accent); }
+.section-portfolio__repo-list li .icon { color: var(--accent); }
 
 .section-portfolio__repo-list .repo-title {
   font-family: var(--font-display);
@@ -1004,7 +1019,7 @@ button:focus-visible {
   color: var(--text-2);
 }
 
-.gh-card__head i { color: var(--accent); font-size: 14px; }
+.gh-card__head .icon { color: var(--accent); width: 16px; height: 16px; }
 
 .gh-card__link {
   margin-left: auto;
@@ -1670,7 +1685,7 @@ footer .social-icons {
   margin-bottom: 0;
 }
 
-footer i { color: var(--text-2); }
+footer .icon { color: var(--text-2); }
 
 .footer__copy {
   margin: var(--s-3) 0 0;
@@ -1732,8 +1747,9 @@ footer i { color: var(--text-2); }
   outline-offset: 3px;
 }
 
-.to-top i {
-  font-size: 16px;
+.to-top .icon {
+  width: 18px;
+  height: 18px;
   line-height: 1;
 }
 

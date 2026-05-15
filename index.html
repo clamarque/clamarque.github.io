@@ -74,11 +74,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="preload" as="image" href="img/C.png" />
 
     <!-- Critical CSS first (1st-party, fast) -->
-    <link rel="stylesheet" href="css/style.css?v=2026.22" />
+    <link rel="stylesheet" href="css/style.css?v=2026.23" />
 
     <!-- Fonts: load non-render-blocking -->
     <link
@@ -99,30 +98,138 @@
       />
     </noscript>
 
-    <!-- FontAwesome 4 via CSS (non-blocking, lighter than JS kit) -->
-    <link
-      rel="preload"
-      as="style"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      media="print"
-      onload="this.media='all'"
-      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-    </noscript>
   </head>
 
   <body>
+    <!-- Inline SVG icon sprite (Lucide, MIT) — replaces FontAwesome -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      aria-hidden="true"
+    >
+      <defs>
+        <g
+          id="i-github"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+          />
+          <path d="M9 18c-4.51 2-5-2-7-2" />
+        </g>
+        <g
+          id="i-linkedin"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect width="4" height="12" x="2" y="9" />
+          <circle cx="4" cy="4" r="2" />
+        </g>
+        <g
+          id="i-chevron-down"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </g>
+        <g
+          id="i-arrow-up"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 19V5" />
+          <path d="m5 12 7-7 7 7" />
+        </g>
+        <g
+          id="i-code"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m16 18 6-6-6-6" />
+          <path d="m8 6-6 6 6 6" />
+        </g>
+        <g
+          id="i-graduation-cap"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"
+          />
+          <path d="M22 10v6" />
+          <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+        </g>
+        <g
+          id="i-coffee"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M10 2v2" />
+          <path d="M14 2v2" />
+          <path d="M6 2v2" />
+          <path
+            d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"
+          />
+        </g>
+        <g
+          id="i-rocket"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+          />
+          <path
+            d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+          />
+          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+        </g>
+        <g
+          id="i-search"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </g>
+        <g id="i-star" fill="currentColor" stroke="none">
+          <path
+            d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.36 4.78 5.27.77a.56.56 0 0 1 .31.96l-3.81 3.71.9 5.25a.56.56 0 0 1-.82.59L12 17.85l-4.71 2.48a.56.56 0 0 1-.82-.59l.9-5.25-3.81-3.71a.56.56 0 0 1 .31-.96l5.27-.77z"
+          />
+        </g>
+      </defs>
+    </svg>
+
     <!-- Floating glass nav -->
     <nav class="nav" aria-label="Primary">
       <a href="#section-home" class="nav__brand" aria-label="Home">
@@ -199,13 +306,13 @@
               href="https://github.com/Clamarque"
               class="btn btn-round btn-clear btn-github"
               aria-label="GitHub"
-              ><i class="fa fa-github-alt fa-2x"></i
+              ><svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg
             ></a>
             <a
               href="https://www.linkedin.com/in/charleslamarque"
               class="btn btn-round btn-clear btn-linkedin"
               aria-label="LinkedIn"
-              ><i class="fa fa-linkedin-square fa-2x"></i
+              ><svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg
             ></a>
           </div>
 
@@ -214,7 +321,7 @@
             class="scroll-cue"
             aria-label="Scroll to work"
           >
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"/></svg>
           </a>
         </div>
       </div>
@@ -291,7 +398,7 @@
         <div class="gh-stats" aria-label="GitHub statistics">
           <div class="gh-card">
             <header class="gh-card__head">
-              <i class="fa fa-github" aria-hidden="true"></i>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
               <span data-i18n="gh.activity">GitHub activity</span>
               <a
                 href="https://github.com/Clamarque"
@@ -318,7 +425,7 @@
           </div>
           <div class="gh-card">
             <header class="gh-card__head">
-              <i class="fa fa-code" aria-hidden="true"></i>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg>
               <span data-i18n="gh.langs">Top languages</span>
             </header>
             <ul class="gh-langs" id="gh-langs">
@@ -339,7 +446,7 @@
         <hr class="section__line" />
         <div class="now-grid">
           <article class="now-card">
-            <span class="now-card__icon"><i class="fa fa-code" aria-hidden="true"></i></span>
+            <span class="now-card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg></span>
             <h3 data-i18n="now.building.title">Building</h3>
             <p data-i18n-html="now.building.body">
               Shipping <strong>Badminton Manager</strong> — a web app to
@@ -348,7 +455,7 @@
             </p>
           </article>
           <article class="now-card">
-            <span class="now-card__icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+            <span class="now-card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-graduation-cap"/></svg></span>
             <h3 data-i18n="now.learning.title">Learning</h3>
             <p data-i18n="now.learning.body">
               Deepening React Server Components, edge runtimes and AI-assisted
@@ -356,7 +463,7 @@
             </p>
           </article>
           <article class="now-card">
-            <span class="now-card__icon"><i class="fa fa-coffee" aria-hidden="true"></i></span>
+            <span class="now-card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-coffee"/></svg></span>
             <h3 data-i18n="now.exploring.title">Exploring</h3>
             <p data-i18n="now.exploring.body">
               Design systems, motion design, and accessible UI patterns —
@@ -381,7 +488,7 @@
           <article class="service-card">
             <div class="service-card__head">
               <span class="service-card__icon">
-                <i class="fa fa-rocket" aria-hidden="true"></i>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rocket"/></svg>
               </span>
               <h3 data-i18n="services.mvp.title">MVP &amp; product build</h3>
             </div>
@@ -408,7 +515,7 @@
           <article class="service-card service-card--feature">
             <div class="service-card__head">
               <span class="service-card__icon">
-                <i class="fa fa-code" aria-hidden="true"></i>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg>
               </span>
               <h3 data-i18n="services.dev.title">Ongoing development</h3>
               <span class="service-card__badge" data-i18n="services.popular">Most asked</span>
@@ -436,7 +543,7 @@
           <article class="service-card">
             <div class="service-card__head">
               <span class="service-card__icon">
-                <i class="fa fa-search" aria-hidden="true"></i>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg>
               </span>
               <h3 data-i18n="services.audit.title">Audit &amp; refactor</h3>
             </div>
@@ -656,7 +763,7 @@
             rel="noopener"
             aria-label="GitHub"
           >
-            <i class="fa fa-github-alt fa-2x"></i>
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-github"/></svg>
           </a>
           <a
             href="https://www.linkedin.com/in/charleslamarque"
@@ -665,7 +772,7 @@
             rel="noopener"
             aria-label="LinkedIn"
           >
-            <i class="fa fa-linkedin-square fa-2x"></i>
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg>
           </a>
         </div>
         <p class="footer__copy">
@@ -682,23 +789,8 @@
       aria-label="Back to top"
       title="Back to top"
     >
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg>
     </button>
-
-    <!-- Override FontAwesome @font-face with font-display: swap
-         (declared after the CDN stylesheet so it wins the cascade) -->
-    <style>
-      @font-face {
-        font-family: "FontAwesome";
-        font-style: normal;
-        font-weight: normal;
-        font-display: swap;
-        src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0")
-            format("woff2"),
-          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0")
-            format("woff");
-      }
-    </style>
 
     <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script defer src="js/i18n.js"></script>
