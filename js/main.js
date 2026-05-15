@@ -101,7 +101,12 @@ function extractBadges(markdown) {
 
 function createCarouselContent(badges) {
   return badges
-    .map((badge) => `<div>${marked.parseInline(badge)}</div>`)
+    .map((badge) => {
+      const html = marked
+        .parseInline(badge)
+        .replace(/<img /g, '<img loading="lazy" decoding="async" ')
+      return `<div>${html}</div>`
+    })
     .join("")
 }
 
@@ -125,24 +130,8 @@ async function initCarousel() {
 async function showCarouselWhenImagesLoaded() {
   const carouselContainer = document.querySelector(".carousel-container")
   if (!carouselContainer) return
-  const images = carouselContainer.querySelectorAll("img")
-  if (images.length === 0) {
-    carouselContainer.classList.remove("hidden")
-    return
-  }
-  let imagesLoaded = 0
-  return new Promise((resolve) => {
-    images.forEach((img) => {
-      img.addEventListener("load", () => {
-        imagesLoaded++
-        if (imagesLoaded === images.length) {
-          carouselContainer.classList.remove("hidden")
-          resolve()
-        }
-      })
-      if (img.complete) img.dispatchEvent(new Event("load"))
-    })
-  })
+  // Reveal immediately; lazy badges stream in without blocking paint.
+  carouselContainer.classList.remove("hidden")
 }
 
 // ------------------------------------------------------------
