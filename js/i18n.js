@@ -83,11 +83,9 @@ const I18N = {
     "services.title": "How I can help",
     "services.lead":
       "Three ways we can work together. Every mission starts with a free discovery call to scope the right format.",
-    "services.from": "Starting at",
     "services.popular": "Most asked",
-    "services.unit.project": " / project",
-    "services.unit.day": " / day",
-    "services.unit.audit": " / audit",
+    "services.quote": "On request",
+    "services.cta": "Let's talk →",
 
     "services.mvp.title": "MVP & product build",
     "services.mvp.desc":
@@ -110,9 +108,6 @@ const I18N = {
     "services.audit.b2": "Performance & SEO checks",
     "services.audit.b3": "Written report & roadmap",
 
-    "services.todo.label": "[Edit me]",
-    "services.todo.text":
-      " replace €XXX with your real starting rates before publishing.",
 
     "work.intro":
       'A selection of favorite projects — recently updated. Each one reflects my experience as a full-stack JavaScript developer over the past <span id="years-experience"></span> years, from frontend interfaces to backend architectures.',
@@ -211,11 +206,9 @@ const I18N = {
     "services.title": "Comment je peux aider",
     "services.lead":
       "Trois façons de travailler ensemble. Chaque mission démarre par un appel découverte gratuit pour cadrer le bon format.",
-    "services.from": "À partir de",
     "services.popular": "Le plus demandé",
-    "services.unit.project": " / projet",
-    "services.unit.day": " / jour",
-    "services.unit.audit": " / audit",
+    "services.quote": "Sur devis",
+    "services.cta": "Discutons-en →",
 
     "services.mvp.title": "MVP & build produit",
     "services.mvp.desc":
@@ -238,9 +231,6 @@ const I18N = {
     "services.audit.b2": "Performance & SEO",
     "services.audit.b3": "Rapport écrit & roadmap",
 
-    "services.todo.label": "[À éditer]",
-    "services.todo.text":
-      " remplacez €XXX par vos vrais tarifs de départ avant publication.",
 
     "work.intro":
       'Une sélection de projets favoris — récemment mis à jour. Chacun reflète mes <span id="years-experience"></span> années d\'expérience en JavaScript full-stack, de l\'interface utilisateur à l\'architecture backend.',

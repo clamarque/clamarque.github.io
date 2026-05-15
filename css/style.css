@@ -1342,53 +1342,38 @@ button:focus-visible {
 
 .service-card__price {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
   padding-top: var(--s-4);
   border-top: 1px solid var(--border);
   margin-top: auto;
 }
 
-.service-card__price-label {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-2);
-}
-
-.service-card__price-value {
+.service-card__quote {
   font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 600;
   color: var(--text-0);
   letter-spacing: -0.02em;
 }
 
-.service-card__price-value span {
-  font-family: var(--font-sans);
+.service-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
   font-size: 13px;
-  font-weight: 400;
-  color: var(--text-2);
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: none;
   letter-spacing: 0;
+  white-space: nowrap;
+  transition: gap var(--dur-base) var(--ease-out);
 }
 
-.services__note {
-  margin: var(--s-6) auto 0;
-  max-width: 560px;
-  padding: var(--s-3) var(--s-4);
-  background: rgba(139, 92, 246, 0.08);
-  border: 1px dashed rgba(139, 92, 246, 0.32);
-  border-radius: var(--r-md);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-1);
-  letter-spacing: 0.04em;
-}
-
-.services__note strong {
-  color: var(--accent-2);
-  margin-right: var(--s-2);
+.service-card__cta:hover {
+  color: var(--accent);
+  gap: var(--s-2);
 }
 
 /* Language toggle button */
