@@ -9,12 +9,12 @@ const I18N = {
     "nav.experience": "Experience",
     "nav.cta": "Hire me",
 
-    "hero.meta": "Available for freelance · Lille, FR",
+    "hero.meta": "10+ yrs in consulting · Freelance · Lille, FR",
     "hero.title.lead": "I build web products that are",
     "hero.title.accent": "fast, reliable",
     "hero.title.tail": "& beautiful.",
     "hero.body":
-      "I'm Charles — full-stack JavaScript developer based in Lille. I help teams and founders ship modern web apps from <strong>idea to production</strong>: clean UIs, solid APIs, no bloat.",
+      "I'm Charles — full-stack JavaScript developer based in Lille. <strong>10+ years</strong> delivering for clients in consulting (ESN) — banking &amp; finance, retail/e-commerce, public sector and industry. I ship modern web apps from <strong>idea to production</strong>: clean UIs, solid APIs, no bloat.",
     "hero.cta.work": "View my work",
     "hero.cta.talk": "Let's talk →",
 
@@ -27,12 +27,12 @@ const I18N = {
     "positioning.title.lead": "Builder,",
     "positioning.title.accent": "not just coder.",
     "positioning.body":
-      "I don't just write code. I think product. I care about the user, the business outcome, the long-term maintainability. The result: web apps that ship faster, scale cleaner, and feel right to use.",
+      "A decade of consulting taught me that shipping code isn't enough. I think product, care about the business outcome and long-term maintainability — the way a reliable team member does, not a solo hobbyist. The result: web apps that ship faster, scale cleaner, and feel right to use.",
 
     "about.eyebrow": "About",
     "about.title": "Engineering. Curiosity. Craft.",
     "about.body1":
-      'I\'m a <span id="age"></span>-year-old full-stack JavaScript developer with a strong passion for web technologies. After graduating from an engineering school in computer science in 2016, based in Lille (North of France), I\'ve continued to sharpen my skills as a self-taught developer — staying curious and up to date with the latest trends to build high-quality, modern applications.',
+      'I\'m a full-stack JavaScript developer based in Lille. For <strong>10+ years</strong> I\'ve worked in consulting (ESN), delivering web projects for a wide range of clients — from banking &amp; finance to retail/e-commerce, public sector and industry. That means production-grade code, teamwork, deadlines and constraints — not just side projects.',
     "about.body2":
       "I work with <strong>the following technologies</strong> on a daily basis",
     "about.body3": "Don't hesitate to check out my work below.",
@@ -132,12 +132,12 @@ const I18N = {
     "nav.experience": "Parcours",
     "nav.cta": "Me contacter",
 
-    "hero.meta": "Disponible en freelance · Lille, FR",
+    "hero.meta": "10+ ans en ESN · Freelance · Lille, FR",
     "hero.title.lead": "Je conçois des produits web",
     "hero.title.accent": "rapides, fiables",
     "hero.title.tail": "et beaux.",
     "hero.body":
-      "Je suis Charles — développeur full-stack JavaScript basé à Lille. J'accompagne équipes et fondateurs pour livrer des apps web modernes <strong>de l'idée à la production</strong> : UI soignées, APIs solides, zéro superflu.",
+      "Je suis Charles — développeur full-stack JavaScript basé à Lille. <strong>10+ ans</strong> à livrer pour des clients en ESN — banque &amp; finance, retail/e-commerce, secteur public et industrie. Je livre des apps web modernes <strong>de l'idée à la production</strong> : UI soignées, APIs solides, zéro superflu.",
     "hero.cta.work": "Voir mes projets",
     "hero.cta.talk": "Discutons-en →",
 
@@ -150,12 +150,12 @@ const I18N = {
     "positioning.title.lead": "Builder,",
     "positioning.title.accent": "pas juste développeur.",
     "positioning.body":
-      "Je ne fais pas qu'écrire du code. Je pense produit. Je me soucie de l'utilisateur, du résultat business, de la maintenabilité à long terme. Le résultat : des apps web livrées plus vite, qui scalent proprement et qui font plaisir à utiliser.",
+      "Dix ans de conseil m'ont appris que livrer du code ne suffit pas. Je pense produit, je me soucie du résultat business et de la maintenabilité long terme — comme un membre d'équipe fiable, pas un hobbyiste solo. Le résultat : des apps web livrées plus vite, qui scalent proprement et qui font plaisir à utiliser.",
 
     "about.eyebrow": "À propos",
     "about.title": "Ingénierie. Curiosité. Soin du détail.",
     "about.body1":
-      'J\'ai <span id="age"></span> ans et je suis développeur full-stack JavaScript, passionné par les technos web. Diplômé d\'une école d\'ingénieurs en informatique en 2016, basé à Lille, je continue de me perfectionner en autodidacte — toujours curieux et à jour sur les tendances pour livrer des applications modernes et de qualité.',
+      'Je suis développeur full-stack JavaScript basé à Lille. Depuis <strong>10+ ans</strong> je travaille en ESN, à livrer des projets web pour des clients variés — de la banque &amp; finance au retail/e-commerce, en passant par le secteur public et l\'industrie. Du code de production, du travail d\'équipe, des délais et des contraintes — pas juste des side projects.',
     "about.body2":
       "Je travaille au quotidien avec <strong>les technologies suivantes</strong>",
     "about.body3": "N'hésitez pas à découvrir mes projets ci-dessous.",
