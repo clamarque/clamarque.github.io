@@ -1866,3 +1866,134 @@ footer .icon { color: var(--text-2); }
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Motion layer — pure CSS / GPU only, 0 dependency
+   (global prefers-reduced-motion block above neutralizes all)
+   ============================================================ */
+
+/* 1. Hero entrance cascade on load */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#section-home .home-wrap > * {
+  opacity: 0;
+  animation: riseIn 0.7s var(--ease-out) forwards;
+}
+#section-home .home-wrap > *:nth-child(1) { animation-delay: 0.05s; }
+#section-home .home-wrap > *:nth-child(2) { animation-delay: 0.13s; }
+#section-home .home-wrap > *:nth-child(3) { animation-delay: 0.21s; }
+#section-home .home-wrap > *:nth-child(4) { animation-delay: 0.29s; }
+#section-home .home-wrap > *:nth-child(5) { animation-delay: 0.37s; }
+#section-home .home-wrap > *:nth-child(6) { animation-delay: 0.45s; }
+#section-home .home-wrap > *:nth-child(7) { animation-delay: 0.53s; }
+#section-home .home-wrap > *:nth-child(8) { animation-delay: 0.61s; }
+
+/* 2. Sequenced child reveal inside revealed sections */
+.stats__item,
+.now-card,
+.service-card,
+.timeline__item,
+.gh-card,
+.section-portfolio__repo-list > li {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+
+.is-visible .stats__item,
+.is-visible .now-card,
+.is-visible .service-card,
+.is-visible .timeline__item,
+.is-visible .gh-card,
+#section-portfolio.is-visible .section-portfolio__repo-list > li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-visible .stats__item:nth-child(2),
+.is-visible .now-card:nth-child(2),
+.is-visible .service-card:nth-child(2),
+.is-visible .timeline__item:nth-child(2),
+.is-visible .gh-card:nth-child(2),
+#section-portfolio.is-visible .section-portfolio__repo-list > li:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.is-visible .stats__item:nth-child(3),
+.is-visible .now-card:nth-child(3),
+.is-visible .service-card:nth-child(3),
+.is-visible .timeline__item:nth-child(3),
+#section-portfolio.is-visible .section-portfolio__repo-list > li:nth-child(3) {
+  transition-delay: 0.16s;
+}
+.is-visible .stats__item:nth-child(4),
+.is-visible .timeline__item:nth-child(4),
+#section-portfolio.is-visible .section-portfolio__repo-list > li:nth-child(4) {
+  transition-delay: 0.24s;
+}
+.is-visible .timeline__item:nth-child(5) { transition-delay: 0.32s; }
+
+/* 3. Slow aurora drift (mesh bg) */
+@keyframes auroraDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.04);
+  }
+  50% {
+    transform: translate3d(-2.5%, -1.5%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.04);
+  }
+}
+
+body::before {
+  animation: auroraDrift 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* 4a. Accent text shimmer */
+@keyframes accentShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.accent,
+#section-home h1 .accent,
+.positioning__title .accent,
+.contact-card__title .accent {
+  background-size: 220% auto;
+  animation: accentShimmer 7s linear infinite;
+}
+
+/* 4b. Nav link underline slide */
+.nav__links a:not(.nav__cta) {
+  position: relative;
+}
+.nav__links a:not(.nav__cta)::after {
+  content: "";
+  position: absolute;
+  left: var(--s-3);
+  right: var(--s-3);
+  bottom: 5px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+.nav__links a:not(.nav__cta):hover::after {
+  transform: scaleX(1);
+}

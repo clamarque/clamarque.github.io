@@ -219,12 +219,10 @@ function getExpYears() {
   const yearsExperience = currentYear - startYear
   const yearsEl = document.getElementById("years-experience")
   if (yearsEl) yearsEl.textContent = yearsExperience
-  const statsYearsEl = document.getElementById("stats-years")
-  if (statsYearsEl) statsYearsEl.textContent = yearsExperience
+  // #stats-years owned by initStatCounters (count-up on scroll)
 }
 
 async function renderStatsAndCard() {
-  const statsReposEl = document.getElementById("stats-repos")
   const reposEl = document.getElementById("gh-repos")
   const starsEl = document.getElementById("gh-stars")
   const followersEl = document.getElementById("gh-followers")
@@ -234,7 +232,7 @@ async function renderStatsAndCard() {
     const [user, repos] = await Promise.all([getUser(), getRepos()])
 
     if (typeof user.public_repos === "number") {
-      if (statsReposEl) statsReposEl.textContent = user.public_repos + "+"
+      // #stats-repos is owned by the count-up animation (initStatCounters)
       if (reposEl) reposEl.textContent = user.public_repos
     }
     if (followersEl && typeof user.followers === "number") {
@@ -334,6 +332,68 @@ function initBackToTop() {
 }
 
 // ------------------------------------------------------------
+// Animated stat counters
+// ------------------------------------------------------------
+
+function animateCount(el, to, suffix) {
+  if (!el) return
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches
+  if (reduceMotion || typeof requestAnimationFrame !== "function") {
+    el.textContent = to + suffix
+    return
+  }
+  const duration = 1000
+  const start = performance.now()
+  const tick = (now) => {
+    const p = Math.min(1, (now - start) / duration)
+    const eased = 1 - Math.pow(1 - p, 3)
+    el.textContent = Math.round(to * eased) + suffix
+    if (p < 1) requestAnimationFrame(tick)
+  }
+  el.textContent = "0" + suffix
+  requestAnimationFrame(tick)
+}
+
+function initStatCounters() {
+  const section = document.getElementById("section-stats")
+  if (!section) return
+
+  const run = () => {
+    const years = new Date().getFullYear() - 2016
+    animateCount(document.getElementById("stats-years"), years, "")
+    animateCount(document.getElementById("stats-projects"), 20, "+")
+    getUser()
+      .then((user) => {
+        if (typeof user.public_repos === "number") {
+          animateCount(
+            document.getElementById("stats-repos"),
+            user.public_repos,
+            "+"
+          )
+        }
+      })
+      .catch(() => {})
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    run()
+    return
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        io.disconnect()
+        run()
+      }
+    },
+    { threshold: 0.4 }
+  )
+  io.observe(section)
+}
+
+// ------------------------------------------------------------
 // Bootstrap
 // ------------------------------------------------------------
 
@@ -347,6 +407,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   initFooterYear()
   initScrollReveal()
   initBackToTop()
+  initStatCounters()
 
   renderStatsAndCard()
   loadAndRenderRepos()
