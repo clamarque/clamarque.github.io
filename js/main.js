@@ -351,5 +351,41 @@ document.addEventListener("DOMContentLoaded", async function () {
   renderStatsAndCard()
   loadAndRenderRepos()
 
-  initCarousel().then(() => showCarouselWhenImagesLoaded())
+  // Tech-badge carousel = below-fold + decorative.
+  // Defer the README fetch off the critical path: load it when the
+  // About section nears the viewport, or on idle as a fallback.
+  initCarouselDeferred()
 })
+
+function initCarouselDeferred() {
+  let started = false
+  const start = () => {
+    if (started) return
+    started = true
+    initCarousel().then(() => showCarouselWhenImagesLoaded())
+  }
+
+  const target =
+    document.querySelector(".carousel-container") ||
+    document.getElementById("section-about")
+
+  if (target && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          io.disconnect()
+          start()
+        }
+      },
+      { rootMargin: "400px 0px" }
+    )
+    io.observe(target)
+  }
+
+  // Fallback: ensure it loads even if observer never fires.
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(start, { timeout: 4000 })
+  } else {
+    setTimeout(start, 2500)
+  }
+}
