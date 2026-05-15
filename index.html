@@ -78,7 +78,7 @@
     <link rel="preload" as="image" href="img/C.png" />
 
     <!-- Critical CSS first (1st-party, fast) -->
-    <link rel="stylesheet" href="css/style.css?v=2026.16" />
+    <link rel="stylesheet" href="css/style.css?v=2026.18" />
 
     <!-- Fonts: load non-render-blocking -->
     <link
@@ -148,6 +148,7 @@
       </div>
     </nav>
 
+    <main id="main">
     <section id="section-home">
       <div class="overlay">
         <div class="home-wrap text-center">
@@ -621,6 +622,7 @@
         </p>
       </div>
     </section>
+    </main>
 
     <footer>
       <div class="container">
@@ -661,6 +663,21 @@
     >
       <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
+
+    <!-- Override FontAwesome @font-face with font-display: swap
+         (declared after the CDN stylesheet so it wins the cascade) -->
+    <style>
+      @font-face {
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0")
+            format("woff2"),
+          url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0")
+            format("woff");
+      }
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/i18n.js"></script>
